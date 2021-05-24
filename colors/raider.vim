@@ -3,7 +3,7 @@
 " Webpage:     https://github.com/axvr/raider-theme
 " Description: A theme inspired by the classic Tomb Raider games.
 " Licence:     MIT (2021)
-" Last Change: 2021-02-20
+" Last Change: 2021-03-07
 
 hi clear
 if exists("syntax_on")
@@ -28,9 +28,10 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Operator ctermbg=bg ctermfg=251 cterm=NONE guibg=bg guifg=#C9C9C9 gui=NONE
     hi PreProc ctermbg=bg ctermfg=95 cterm=NONE guibg=bg guifg=#88766F gui=NONE
     hi Include ctermbg=bg ctermfg=95 cterm=NONE guibg=bg guifg=#88766F gui=NONE
-    hi Define ctermbg=bg ctermfg=95 cterm=NONE guibg=bg guifg=#88766F gui=NONE
+    hi Macro ctermbg=bg ctermfg=95 cterm=NONE guibg=bg guifg=#88766F gui=NONE
+    hi Define ctermbg=bg ctermfg=137 cterm=NONE guibg=bg guifg=#998B70 gui=NONE
     hi Type ctermbg=bg ctermfg=103 cterm=NONE guibg=bg guifg=#858CA6 gui=NONE
-    hi Special ctermbg=NONE ctermfg=65 cterm=NONE guibg=NONE guifg=#666967 gui=NONE
+    hi Special ctermbg=bg ctermfg=65 cterm=NONE guibg=bg guifg=#666967 gui=NONE
     hi Error ctermbg=NONE ctermfg=131 cterm=bold guibg=NONE guifg=#A74F4F gui=bold
     hi Warning ctermbg=NONE ctermfg=179 cterm=bold guibg=NONE guifg=#EAB56B gui=bold
     hi ModeMsg ctermbg=NONE ctermfg=152 cterm=NONE guibg=NONE guifg=#94BACA gui=NONE
@@ -88,9 +89,10 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi Operator ctermbg=bg ctermfg=white cterm=NONE
     hi PreProc ctermbg=bg ctermfg=darkyellow cterm=NONE
     hi Include ctermbg=bg ctermfg=darkyellow cterm=NONE
+    hi Macro ctermbg=bg ctermfg=darkyellow cterm=NONE
     hi Define ctermbg=bg ctermfg=darkyellow cterm=NONE
     hi Type ctermbg=bg ctermfg=darkblue cterm=NONE
-    hi Special ctermbg=NONE ctermfg=grey cterm=NONE
+    hi Special ctermbg=bg ctermfg=grey cterm=NONE
     hi Error ctermbg=NONE ctermfg=red cterm=bold
     hi Warning ctermbg=NONE ctermfg=yellow cterm=bold
     hi ModeMsg ctermbg=NONE ctermfg=blue cterm=NONE
@@ -140,7 +142,6 @@ hi! link Function Identifier
 hi! link Conditonal Statement
 hi! link Repeat Statement
 hi! link Label Statement
-hi! link Macro Define
 hi! link PreCondit Define
 hi! link StorageClass Type
 hi! link Structure Type
