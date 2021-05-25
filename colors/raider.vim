@@ -1,9 +1,9 @@
 " Name:        raider.vim
-" Author:      Alex Vear <av@axvr.io>
-" Webpage:     https://github.com/axvr/raider-theme
-" Description: A theme inspired by the classic Tomb Raider games.
+" Author:      Alex Vear <alex@vear.uk>
+" Webpage:     https://github.com/axvr/raider.vim
+" Description: A Vim theme inspired by the iconic Tomb Raider video game franchise.
 " Licence:     MIT (2021)
-" Last Change: 2021-03-07
+" Last Change: 2021-05-25
 
 hi clear
 if exists("syntax_on")

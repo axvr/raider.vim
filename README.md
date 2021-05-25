@@ -7,7 +7,7 @@ significantly.
 
 ![](https://raw.githubusercontent.com/axvr/raider.vim/d692fad234334f52a2260e3da823d4eef36754cb/raider1.png)
 
-_The font in the above screenshots is [Inconsolata](https://levien.com/type/myfonts/inconsolata.html) created by [Raph Levien](https://levien.com/)._
+_The font in the above screenshot is [Inconsolata](https://levien.com/type/myfonts/inconsolata.html) created by [Raph Levien](https://levien.com/)._
 
 
 ## Usage
@@ -20,9 +20,9 @@ set termguicolors
 colorscheme raider
 ```
 
-**Note**: Raider.vim is a true-colour Vim theme.  Make sure your terminal
-emulator has true/24-bit colour support so that the colours match the
-screenshot above.
+**Note**: Raider.vim is a true-colour Vim theme.  If your terminal emulator
+does not support true/24-bit colours, the colours won't match those in the
+above screenshot.
 
 
 ## Ports
