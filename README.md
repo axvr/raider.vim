@@ -5,7 +5,7 @@ A Vim theme inspired by the iconic [Tomb Raider][] video game franchise.
 **Note**: this theme is still in development and the colours may change
 significantly.
 
-![](https://raw.githubusercontent.com/axvr/raider.vim/4ecc2e5a200ae027c8d5f4e7c43d2b8a8ff75cfc/raider1.png)
+![](https://raw.githubusercontent.com/axvr/raider.vim/d692fad234334f52a2260e3da823d4eef36754cb/raider1.png)
 
 _The font in the above screenshots is [Inconsolata](https://levien.com/type/myfonts/inconsolata.html) created by [Raph Levien](https://levien.com/)._
 
