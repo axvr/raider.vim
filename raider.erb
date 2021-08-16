@@ -3,12 +3,6 @@
     # Author:        Romain Lafourcade (https://github.com/romainl)
     # Canonical URL: https://github.com/romainl/vim-rnb
 
-    # Information:
-    #
-    # Make sure the name of your colorscheme is unique and attractive.
-    # The description should fit in a single line with no linefeed.
-    # 'background' can be "light" or "dark".
-
     information = {
         author:      "Alex Vear",
         email:       "alex@vear.uk",
@@ -31,8 +25,9 @@
     #                 "white", or "NONE"
     # ]
     #
-    # If your colors are defined correctly, the resulting colorscheme is guaranteed
-    # to work in GVim (Windows/Linux), MacVim (MacOS), and any properly set up terminal emulator.
+    # If your colors are defined correctly, the resulting colorscheme is
+    # guaranteed to work in GVim (Windows/Linux), MacVim (MacOS), and any
+    # properly set up terminal emulator.
 
     # TODO: 256 colours.
     # TODO: Improve colours.
@@ -48,7 +43,7 @@
     green = ["#679D80", 72, "green"]          # Pale blueish-green.
 
     fg = ["#C9C9C9", 251, "white"]           # Foreground.
-    fg_alt = ["#666967", 65, "grey"]        # Darker foreground.
+    fg_alt = ["#666967", 65, "grey"]         # Darker foreground.
 
     bg = ["#222222", 235, "black"]           # Background.
     bg_alt = ["#2A2A2A", 236, "darkgrey"]    # Light background.
@@ -69,11 +64,11 @@
     #                     "standout", "NONE" or "undercurl"
     #   ]
     #
-    # The sample above tells Vim to render normal text in dark gray against a white
-    # background, without any other styling.
+    # The sample above tells Vim to render normal text in dark gray against
+    # a white background, without any other styling.
     #
-    # Or you can link an highlight group to another. Here, "Title" will inherit its style from
-    # "Normal":
+    # Or you can link an highlight group to another. Here, "Title" will inherit
+    # its style from "Normal":
     #
     #   [ "Title", "Normal" ]
     #
@@ -87,8 +82,8 @@
     #     red             color used for the undercurl
     #   ]
     #
-    # The sample above tells Vim to render badly spelled words in red against the current
-    # background, with a red undercurl.
+    # The sample above tells Vim to render badly spelled words in red against
+    # the current background, with a red undercurl.
 
     highlights = [
         [ "Normal", bg, fg, "NONE" ],
@@ -121,7 +116,7 @@
         [ "Include", "bg", brown, "NONE" ],
 
         [ "Macro", "bg", brown, "NONE" ],
-        [ "Define", "bg", khaki, "NONE" ],
+        [ "Define", "bg", khaki, "NONE" ],  # TODO: different colour?
         [ "PreCondit", "Define" ],
 
         [ "Type", "bg", slate, "NONE" ],
@@ -206,10 +201,9 @@
         [ "gitcommitSummary", "Title" ]
     ]
 
-    # Define the color palette used by :terminal when in GUI Vim
-    # or in TUI Vim when 'termguicolors' is enabled. If this list
-    # is empty or if it doesn't contain exactly 16 items, the corresponding
-    # Vim variable won't be set.
+    # Define the color palette used by :terminal when in GUI Vim or in TUI Vim
+    # when 'termguicolors' is enabled. If this list is empty or if it doesn't
+    # contain exactly 16 items, the corresponding Vim variable won't be set.
     terminal_ansi_colors = [
         # Dark
         bg,           # black
@@ -287,11 +281,17 @@ hi! link <%= link[0] %> <%= link[1] %>
 <% end -%>
 <% if terminal_ansi_colors.length == 16 -%>
 <%= '' %>
-let g:terminal_ansi_colors = [
-<% for color in terminal_ansi_colors -%>
-        \ '<%= color[0] %>',
+if has('nvim')
+<% terminal_ansi_colors.each_with_index do |color,index| -%>
+    let g:terminal_color_<%= index %> = '<%= color[0] %>'
 <% end -%>
-        \ ]
+else
+    let g:terminal_ansi_colors = [
+<% for color in terminal_ansi_colors -%>
+            \ '<%= color[0] %>',
+<% end -%>
+            \ ]
+endif
 <% end -%>
 
 " Generated with RNB (https://github.com/romainl/vim-rnb)

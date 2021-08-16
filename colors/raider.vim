@@ -3,7 +3,7 @@
 " Webpage:     https://github.com/axvr/raider.vim
 " Description: A Vim theme inspired by the iconic Tomb Raider video game franchise.
 " Licence:     MIT (2021)
-" Last Change: 2021-05-25
+" Last Change: 2021-08-16
 
 hi clear
 if exists("syntax_on")
@@ -169,23 +169,42 @@ hi! link htmlTag Delimiter
 hi! link htmlEndTag htmlTag
 hi! link gitcommitSummary Title
 
-let g:terminal_ansi_colors = [
-        \ '#222222',
-        \ '#ac2c2c',
-        \ '#4e9a06',
-        \ '#c4a000',
-        \ '#3465a4',
-        \ '#75507b',
-        \ '#389aad',
-        \ '#666967',
-        \ '#2A2A2A',
-        \ '#A74F4F',
-        \ '#679D80',
-        \ '#EAB56B',
-        \ '#729fcf',
-        \ '#94BACA',
-        \ '#34e2e2',
-        \ '#C9C9C9',
-        \ ]
+if has('nvim')
+    let g:terminal_color_0 = '#222222'
+    let g:terminal_color_1 = '#ac2c2c'
+    let g:terminal_color_2 = '#4e9a06'
+    let g:terminal_color_3 = '#c4a000'
+    let g:terminal_color_4 = '#3465a4'
+    let g:terminal_color_5 = '#75507b'
+    let g:terminal_color_6 = '#389aad'
+    let g:terminal_color_7 = '#666967'
+    let g:terminal_color_8 = '#2A2A2A'
+    let g:terminal_color_9 = '#A74F4F'
+    let g:terminal_color_10 = '#679D80'
+    let g:terminal_color_11 = '#EAB56B'
+    let g:terminal_color_12 = '#729fcf'
+    let g:terminal_color_13 = '#94BACA'
+    let g:terminal_color_14 = '#34e2e2'
+    let g:terminal_color_15 = '#C9C9C9'
+else
+    let g:terminal_ansi_colors = [
+            \ '#222222',
+            \ '#ac2c2c',
+            \ '#4e9a06',
+            \ '#c4a000',
+            \ '#3465a4',
+            \ '#75507b',
+            \ '#389aad',
+            \ '#666967',
+            \ '#2A2A2A',
+            \ '#A74F4F',
+            \ '#679D80',
+            \ '#EAB56B',
+            \ '#729fcf',
+            \ '#94BACA',
+            \ '#34e2e2',
+            \ '#C9C9C9',
+            \ ]
+endif
 
 " Generated with RNB (https://github.com/romainl/vim-rnb)
