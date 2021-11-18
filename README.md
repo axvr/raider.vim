@@ -1,6 +1,6 @@
 # Raider.vim
 
-A Vim theme inspired by the iconic [Tomb Raider][] video game franchise.
+A Vim colour scheme for archaeological escapades.
 
 **Note**: this theme is still in development and the colours may change
 significantly.
@@ -33,13 +33,11 @@ An incomplete GNU Emacs port can be found on the
 
 ## Attribution
 
-Inspired by the iconic [Tomb Raider][] video game franchise.  Made possible
-thanks to [Romain Lafourcade][]'s [RNB][] Vim colour scheme template.
+Made possible thanks to [Romain Lafourcade][]'s [RNB][] Vim colour scheme template.
 
 Fallback xterm-256 colours were selected using
 [`colours.clj`](https://github.com/axvr/codedump/tree/master/2021/colours).
 
 
-[Tomb Raider]: https://en.wikipedia.org/wiki/Tomb_Raider
 [Romain Lafourcade]: https://github.com/romainl
 [RNB]: https://github.com/romainl/vim-rnb
