@@ -171,37 +171,37 @@ hi! link gitcommitSummary Title
 
 if has('nvim')
     let g:terminal_color_0 = '#222222'
-    let g:terminal_color_1 = '#ac2c2c'
-    let g:terminal_color_2 = '#4e9a06'
-    let g:terminal_color_3 = '#c4a000'
+    let g:terminal_color_1 = '#A74F4F'
+    let g:terminal_color_2 = '#679D80'
+    let g:terminal_color_3 = '#998B70'
     let g:terminal_color_4 = '#3465a4'
     let g:terminal_color_5 = '#75507b'
-    let g:terminal_color_6 = '#389aad'
+    let g:terminal_color_6 = '#29acc1'
     let g:terminal_color_7 = '#666967'
     let g:terminal_color_8 = '#2A2A2A'
-    let g:terminal_color_9 = '#A74F4F'
-    let g:terminal_color_10 = '#679D80'
+    let g:terminal_color_9 = '#c61c29'
+    let g:terminal_color_10 = '#2bb469'
     let g:terminal_color_11 = '#EAB56B'
-    let g:terminal_color_12 = '#729fcf'
-    let g:terminal_color_13 = '#94BACA'
+    let g:terminal_color_12 = '#94BACA'
+    let g:terminal_color_13 = '#c061cb'
     let g:terminal_color_14 = '#34e2e2'
     let g:terminal_color_15 = '#C9C9C9'
 else
     let g:terminal_ansi_colors = [
             \ '#222222',
-            \ '#ac2c2c',
-            \ '#4e9a06',
-            \ '#c4a000',
-            \ '#3465a4',
-            \ '#75507b',
-            \ '#389aad',
-            \ '#666967',
-            \ '#2A2A2A',
             \ '#A74F4F',
             \ '#679D80',
+            \ '#998B70',
+            \ '#3465a4',
+            \ '#75507b',
+            \ '#29acc1',
+            \ '#666967',
+            \ '#2A2A2A',
+            \ '#c61c29',
+            \ '#2bb469',
             \ '#EAB56B',
-            \ '#729fcf',
             \ '#94BACA',
+            \ '#c061cb',
             \ '#34e2e2',
             \ '#C9C9C9',
             \ ]
