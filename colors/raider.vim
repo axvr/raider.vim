@@ -3,7 +3,7 @@
 " Webpage:     https://github.com/axvr/raider.vim
 " Description: A Vim colour scheme for archaeological escapades.
 " Licence:     MIT (2021)
-" Last Change: 2021-11-29
+" Last Change: 2021-12-31
 
 hi clear
 if exists("syntax_on")
@@ -44,7 +44,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Title ctermbg=NONE ctermfg=137 cterm=bold guibg=NONE guifg=#998B70 gui=bold
     hi LineNr ctermbg=NONE ctermfg=242 cterm=NONE guibg=NONE guifg=#666967 gui=NONE
     hi CursorLineNr ctermbg=238 ctermfg=179 cterm=NONE guibg=#2A2A2A guifg=#EAB56B gui=NONE
-    hi Cursor ctermbg=235 ctermfg=251 cterm=NONE guibg=#222222 guifg=#C9C9C9 gui=NONE
+    hi Cursor ctermbg=251 ctermfg=235 cterm=NONE guibg=#C9C9C9 guifg=#222222 gui=NONE
     hi CursorLine ctermbg=238 ctermfg=NONE cterm=NONE guibg=#2A2A2A guifg=NONE gui=NONE
     hi ColorColumn ctermbg=234 ctermfg=NONE cterm=NONE guibg=#1A1A1A guifg=NONE gui=NONE
     hi SignColumn ctermbg=NONE ctermfg=242 cterm=NONE guibg=NONE guifg=#666967 gui=NONE
@@ -105,7 +105,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi Title ctermbg=NONE ctermfg=darkyellow cterm=bold
     hi LineNr ctermbg=NONE ctermfg=grey cterm=NONE
     hi CursorLineNr ctermbg=darkgrey ctermfg=yellow cterm=NONE
-    hi Cursor ctermbg=black ctermfg=white cterm=NONE
+    hi Cursor ctermbg=white ctermfg=black cterm=NONE
     hi CursorLine ctermbg=darkgrey ctermfg=NONE cterm=NONE
     hi ColorColumn ctermbg=darkgrey ctermfg=NONE cterm=NONE
     hi SignColumn ctermbg=NONE ctermfg=grey cterm=NONE
