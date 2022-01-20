@@ -3,7 +3,8 @@
 " Webpage:     https://github.com/axvr/raider.vim
 " Description: A Vim colour scheme for archaeological escapades.
 " Licence:     MIT (2021)
-" Last Change: 2021-12-31
+" Last Change: 2022-01-20
+" Generator:   Modified version of RNB (https://github.com/romainl/vim-rnb)
 
 hi clear
 if exists("syntax_on")
@@ -169,42 +170,42 @@ hi! link htmlTag Delimiter
 hi! link htmlEndTag htmlTag
 hi! link gitcommitSummary Title
 
-if has('nvim')
-    let g:terminal_color_0 = '#222222'
-    let g:terminal_color_1 = '#A74F4F'
-    let g:terminal_color_2 = '#679D80'
-    let g:terminal_color_3 = '#998B70'
-    let g:terminal_color_4 = '#3465a4'
-    let g:terminal_color_5 = '#75507b'
-    let g:terminal_color_6 = '#29acc1'
-    let g:terminal_color_7 = '#666967'
-    let g:terminal_color_8 = '#2A2A2A'
-    let g:terminal_color_9 = '#c61c29'
-    let g:terminal_color_10 = '#2bb469'
-    let g:terminal_color_11 = '#EAB56B'
-    let g:terminal_color_12 = '#94BACA'
-    let g:terminal_color_13 = '#c061cb'
-    let g:terminal_color_14 = '#34e2e2'
-    let g:terminal_color_15 = '#C9C9C9'
-else
-    let g:terminal_ansi_colors = [
-            \ '#222222',
-            \ '#A74F4F',
-            \ '#679D80',
-            \ '#998B70',
-            \ '#3465a4',
-            \ '#75507b',
-            \ '#29acc1',
-            \ '#666967',
-            \ '#2A2A2A',
-            \ '#c61c29',
-            \ '#2bb469',
-            \ '#EAB56B',
-            \ '#94BACA',
-            \ '#c061cb',
-            \ '#34e2e2',
-            \ '#C9C9C9',
-            \ ]
+if (has('termguicolors') && &termguicolors) || has('gui_running')
+    if has('nvim')
+        let g:terminal_color_0 = '#222222'
+        let g:terminal_color_1 = '#A74F4F'
+        let g:terminal_color_2 = '#679D80'
+        let g:terminal_color_3 = '#998B70'
+        let g:terminal_color_4 = '#3465a4'
+        let g:terminal_color_5 = '#75507b'
+        let g:terminal_color_6 = '#29acc1'
+        let g:terminal_color_7 = '#666967'
+        let g:terminal_color_8 = '#2A2A2A'
+        let g:terminal_color_9 = '#c61c29'
+        let g:terminal_color_10 = '#2bb469'
+        let g:terminal_color_11 = '#EAB56B'
+        let g:terminal_color_12 = '#94BACA'
+        let g:terminal_color_13 = '#c061cb'
+        let g:terminal_color_14 = '#34e2e2'
+        let g:terminal_color_15 = '#C9C9C9'
+    else
+        let g:terminal_ansi_colors = [
+                \ '#222222',
+                \ '#A74F4F',
+                \ '#679D80',
+                \ '#998B70',
+                \ '#3465a4',
+                \ '#75507b',
+                \ '#29acc1',
+                \ '#666967',
+                \ '#2A2A2A',
+                \ '#c61c29',
+                \ '#2bb469',
+                \ '#EAB56B',
+                \ '#94BACA',
+                \ '#c061cb',
+                \ '#34e2e2',
+                \ '#C9C9C9',
+                \ ]
+    endif
 endif
-
-" Generated with RNB (https://github.com/romainl/vim-rnb)

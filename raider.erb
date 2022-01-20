@@ -234,6 +234,7 @@
 " Description: <%= information[:description] %>
 " Licence:     <%= information[:licence] %>
 " Last Change: <%= Time.new.strftime "%Y-%m-%d" %>
+" Generator:   Modified version of RNB (https://github.com/romainl/vim-rnb)
 
 hi clear
 if exists("syntax_on")
@@ -281,17 +282,17 @@ hi! link <%= link[0] %> <%= link[1] %>
 <% end -%>
 <% if terminal_ansi_colors.length == 16 -%>
 <%= '' %>
-if has('nvim')
+if (has('termguicolors') && &termguicolors) || has('gui_running')
+    if has('nvim')
 <% terminal_ansi_colors.each_with_index do |color,index| -%>
-    let g:terminal_color_<%= index %> = '<%= color[0] %>'
+        let g:terminal_color_<%= index %> = '<%= color[0] %>'
 <% end -%>
-else
-    let g:terminal_ansi_colors = [
+    else
+        let g:terminal_ansi_colors = [
 <% for color in terminal_ansi_colors -%>
-            \ '<%= color[0] %>',
+                \ '<%= color[0] %>',
 <% end -%>
-            \ ]
+                \ ]
+    endif
 endif
 <% end -%>
-
-" Generated with RNB (https://github.com/romainl/vim-rnb)
