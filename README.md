@@ -17,9 +17,9 @@ set termguicolors
 colorscheme raider
 ```
 
-**Note**: Raider.vim is a true-colour Vim theme.  If your terminal emulator
-does not support true/24-bit colours, the colours won't match those in the
-above screenshot.
+> **Note** Raider.vim is a true-colour Vim theme.  If your terminal emulator
+> does not support true/24-bit colours, the colours won't match those in the
+> above screenshot.
 
 
 ## Ports
