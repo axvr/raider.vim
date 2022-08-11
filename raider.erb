@@ -9,7 +9,7 @@
         name:        "raider",
         description: "A Vim colour scheme for archaeological escapades.",
         background:  "dark",
-        webpage:     "https://github.com/axvr/raider.vim",
+        webpage:     "https://git.axvr.uk/raider.vim",
         licence:     "MIT (2021)"
     }
 
@@ -29,26 +29,23 @@
     # guaranteed to work in GVim (Windows/Linux), MacVim (MacOS), and any
     # properly set up terminal emulator.
 
-    # TODO: 256 colours.
-    # TODO: Improve colours.
-
-    brown  = ["#88766F", 95, "darkyellow"]   # Light redish brown.
-    khaki  = ["#998B70", 137, "darkyellow"]  # Light yellowish-brown.
-    yellow = ["#EAB56B", 179, "yellow"]      # Brownish pale yellow.
-    red    = ["#A74F4F", 131, "red"]         # Pale red.
+    brown  = ["#88766F", 95, "darkyellow"]    # Light redish brown.
+    wood   = ["#A79180", 137, "darkyellow"]   # Light yellowish-brown.
+    yellow = ["#EAB56B", 179, "yellow"]       # Brownish pale yellow.
+    red    = ["#A74F4F", 131, "red"]          # Pale red.
 
     slate = ["#858CA6", 103, "darkblue"]      # Purplish blue.
     teal  = ["#94BACA", 110, "blue"]          # Pale blueish-teal.
     darkteal = ["#96A8A1", 109, "darkgreen"]  # Pale greenish-teal.
     green = ["#679D80", 72, "green"]          # Pale blueish-green.
 
-    fg = ["#C9C9C9", 251, "white"]           # Foreground.
-    fg_alt = ["#666967", 242, "grey"]        # Darker foreground.
+    fg = ["#C9C9C9", 251, "white"]            # Foreground.
+    fg_alt = ["#666967", 242, "grey"]         # Darker foreground.
 
-    bg = ["#222222", 235, "black"]           # Background.
-    bg_alt = ["#2A2A2A", 238, "darkgrey"]    # Light background.
+    bg = ["#222222", 235, "black"]            # Background.
+    bg_alt = ["#2A2A2A", 238, "darkgrey"]     # Light background.
 
-    layer = ["#343434", 237, "darkgrey"]     # Layer on background.
+    layer = ["#343434", 237, "darkgrey"]      # Layer on background.
     layer_alt = ["#1A1A1A", 234, "darkgrey"]
 
     hidden = ["#4A4A4A", 239, "darkgrey"]
@@ -102,7 +99,7 @@
         [ "Identifier", "bg", darkteal, "NONE" ],
         [ "Function", "Identifier" ],
 
-        [ "Statement", "bg", khaki, "NONE" ],
+        [ "Statement", "bg", wood, "NONE" ],
         [ "Conditonal", "Statement" ],
         [ "Repeat", "Statement" ],
         [ "Label", "Statement" ],
@@ -116,7 +113,7 @@
         [ "Include", "bg", brown, "NONE" ],
 
         [ "Macro", "bg", brown, "NONE" ],
-        [ "Define", "bg", khaki, "NONE" ],  # TODO: different colour?
+        [ "Define", "bg", wood, "NONE" ],
         [ "PreCondit", "Define" ],
 
         [ "Type", "bg", slate, "NONE" ],
@@ -144,7 +141,7 @@
         [ "Todo", "NONE", green, "bold" ],
         [ "Underlined", "NONE", fg, "underline" ],
 
-        [ "StatusLine", layer, khaki, "NONE" ],
+        [ "StatusLine", layer, wood, "NONE" ],
         [ "StatusLineNC", bg_alt, fg_alt, "NONE" ],
         [ "StatusLineTerm", "StatusLine" ],
         [ "StatusLineTermNC", "StatusLineNC" ],
@@ -154,7 +151,7 @@
         [ "WildMenu", bg_alt, yellow, "NONE" ],
         [ "VertSplit", bg_alt, bg_alt, "NONE" ],
 
-        [ "Title", "NONE", khaki, "bold" ],
+        [ "Title", "NONE", wood, "bold" ],
 
         [ "LineNr", "NONE", fg_alt, "NONE" ],
         [ "CursorLineNr", bg_alt, yellow, "NONE" ],
@@ -169,15 +166,15 @@
 
         [ "Pmenu", bg_alt, "NONE", "NONE" ],
         [ "PmenuSbar", layer, "NONE", "NONE" ],
-        [ "PmenuSel", layer, khaki, "NONE" ],
+        [ "PmenuSel", layer, wood, "NONE" ],
         [ "PmenuThumb", teal, "NONE", "NONE" ],
 
         [ "FoldColumn", "NONE", bg_alt, "NONE" ],
         [ "Folded", layer_alt, fg_alt, "NONE" ],
 
-        [ "SpecialKey", "NONE", khaki, "NONE" ],
+        [ "SpecialKey", "NONE", wood, "NONE" ],
         [ "IncSearch", yellow, bg, "NONE" ],
-        [ "Search", khaki, bg, "NONE" ],
+        [ "Search", wood, bg, "NONE" ],
         [ "Directory", "NONE", teal, "NONE" ],
         [ "MatchParen", "NONE", yellow, "bold" ],
 
@@ -209,7 +206,7 @@
         bg,           # black
         red,          # red
         green,        # green
-        khaki,        # yellow
+        wood,         # yellow
         ["#3465a4"],  # blue
         ["#75507b"],  # magenta
         ["#29acc1"],  # cyan
