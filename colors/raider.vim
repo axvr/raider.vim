@@ -3,7 +3,7 @@
 " Webpage:     https://git.axvr.uk/raider.vim
 " Description: A Vim colour scheme for archaeological escapades.
 " Licence:     MIT (2021)
-" Last Change: 2022-08-11
+" Last Change: 2022-10-02
 " Generator:   Modified version of RNB (https://github.com/romainl/vim-rnb)
 
 hi clear
@@ -163,6 +163,7 @@ hi! link TabLine StatusLineNC
 hi! link TabLineFill StatusLineNC
 hi! link TabLineSel StatusLine
 hi! link CursorColumn CursorLine
+hi! link CurSearch IncSearch
 hi! link SpellRare SpellLocal
 hi! link diffAdded DiffAdd
 hi! link diffRemoved DiffDelete
