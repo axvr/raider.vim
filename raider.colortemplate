@@ -162,6 +162,6 @@ gitcommitSummary -> Title
 
 ;;; Integrated terminal colours.
 
-;; Bold      black     red      green      yellow  blue        magenta        cyan        white
-Term Colors: black     red      green      wood    term_b_blue term_b_magenta term_b_cyan white_alt
-Term Colors: black_alt term_red term_green yellow  teal        term_magenta   term_cyan   white
+;;           black     red      green      yellow  blue        magenta        cyan        white
+Term Colors: black     red      green      wood    term_b_blue term_b_magenta term_b_cyan white_alt  ; Bold
+Term Colors: black_alt term_red term_green yellow  teal        term_magenta   term_cyan   white      ; Normal
