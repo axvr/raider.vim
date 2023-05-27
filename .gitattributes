@@ -1,5 +1,3 @@
 # See: https://ascribe.axvr.uk
-*           text=auto eol=lf trim-trailing-whitespace final-newline
-*.erb       expand-tab tab-stop=4 linguist-language=Ruby
-Makefile    -expand-tab
-*.md        expand-tab tab-stop=4
+*     text=auto  eol=lf  trim-trailing-whitespace  final-newline
+*.md  expand-tab  tab-stop=4

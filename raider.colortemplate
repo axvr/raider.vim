@@ -1,0 +1,167 @@
+Full name:   Raider
+Short name:  raider
+Author:      Alex Vear <alex@vear.uk>
+Description: A Vim colour scheme for archaeological escapades.
+License:     MIT (2021)
+URL:         https://github.com/axvr/raider.vim
+
+;;; Colour palette.
+
+Variant:    gui 256
+Background: dark
+
+Color: brown     #88766f ~  ; Light redish-brown.
+Color: wood      #a79180 ~  ; Light yellowish-brown.
+Color: yellow    #eab56b ~  ; Pale brownish-yellow.
+Color: red       #a74f4f ~  ; Pale red.
+
+Color: slate     #858ca6 ~  ; Purplish-blue.
+Color: teal      #94baca ~  ; Pale blueish-teal.
+Color: darkteal  #96a8a1 ~  ; Pale greenish-teal.
+Color: green     #679d80 ~  ; Pale blueish-green.
+
+Color: white     #c9c9c9 ~  ; Foreground.
+Color: white_alt #666967 ~  ; Darker foreground.
+Color: black     #222222 ~  ; Background.
+Color: black_alt #2a2a2a ~  ; Lighter background.
+
+Color: layer     #343434 ~  ; Layer on background.
+Color: layer_alt #1a1a1a ~
+
+Color: hidden    #4a4a4a ~
+
+Color: term_b_blue    #3465a4 ~
+Color: term_b_magenta #75507b ~
+Color: term_b_cyan    #29acc1 ~
+Color: term_red       #c61c29 ~
+Color: term_green     #2bb469 ~
+Color: term_magenta   #c061cb ~
+Color: term_cyan      #34e2e2 ~
+
+
+;;; Highlights.
+
+Normal white black
+NonText hidden bg
+Comment white_alt bg
+Conceal -> NonText
+EndOfBuffer -> NonText
+
+Constant brown bg
+Character -> Constant
+Number -> Constant
+Float -> Number
+Boolean -> Constant
+
+String teal bg
+
+Identifier darkteal bg
+Function -> Identifier
+
+Statement wood bg
+Conditional -> Statement
+Repeat -> Statement
+Label -> Statement
+Exception red bg
+
+Keyword slate bg
+Operator white bg
+
+PreProc brown bg
+Include -> PreProc
+Macro -> PreProc
+Define wood bg
+PreCondit -> Define
+
+Type slate bg
+StorageClass -> Type
+Structure -> Type
+Typedef -> Type
+
+Special white_alt bg
+SpecialChar -> Special
+Tag -> Special
+Delimiter -> Special
+SpecialComment -> Special
+Debug -> Special
+
+ErrorMsg red bg bold
+Error -> ErrorMsg
+WarningMsg yellow bg bold
+Warning -> WarningMsg
+
+ModeMsg teal bg
+MoreMsg -> ModeMsg
+Question -> ModeMsg
+
+Ignore -> NonText
+Todo green bg bold
+Underlined white bg underline
+
+StatusLine wood layer
+StatusLineNC white_alt black_alt
+StatusLineTerm -> StatusLine
+StatusLineTermNC -> StatusLineNC
+
+TabLine -> StatusLineNC
+TabLineFill -> StatusLineNC
+TabLineSel -> StatusLine
+
+WildMenu yellow black_alt
+VertSplit black_alt black_alt
+
+Title wood bg bold
+
+LineNr white_alt bg
+LineNrAbove -> LineNr
+LineNrBelow -> LineNr
+CursorLineNr yellow black_alt
+Cursor black white
+CursorLine black_alt bg
+CursorColumn -> CursorLine
+ColorColumn fg layer_alt
+SignColumn white_alt bg
+
+Visual fg layer
+VisualNOS fg layer
+
+Pmenu fg black_alt
+PmenuSbar fg layer
+PmenuSel wood layer
+PmenuThumb teal teal
+
+FoldColumn black_alt bg
+Folded white_alt layer_alt
+
+SpecialKey wood bg
+IncSearch black yellow
+Search black wood
+CurSearch -> IncSearch
+Directory teal bg
+MatchParen yellow bg bold
+
+SpellBad red bg underline
+SpellCap green bg underline
+SpellLocal yellow bg underline
+SpellRare -> SpellLocal
+
+QuickFixLine fg layer_alt
+
+DiffAdd green black_alt
+DiffChange fg black_alt
+DiffDelete red black_alt
+DiffText yellow black_alt
+diffAdded -> DiffAdd
+diffRemoved -> DiffDelete
+
+helpHyperTextJump teal black
+htmlTag -> Delimiter
+htmlEndTag -> htmlTag
+gitcommitSummary -> Title
+
+
+;;; Integrated terminal colours.
+
+;; Bold      black     red      green      yellow  blue        magenta        cyan        white
+Term Colors: black     red      green      wood    term_b_blue term_b_magenta term_b_cyan white_alt
+Term Colors: black_alt term_red term_green yellow  teal        term_magenta   term_cyan   white

@@ -30,11 +30,4 @@ An incomplete GNU Emacs port can be found on the
 
 ## Attribution
 
-Made possible thanks to [Romain Lafourcade][]'s [RNB][] Vim colour scheme template.
-
-Fallback xterm-256 colours were selected using
-[`colours.clj`](https://github.com/axvr/codedump/tree/master/2021/colours).
-
-
-[Romain Lafourcade]: https://github.com/romainl
-[RNB]: https://github.com/romainl/vim-rnb
+Built with [Vim Colourtemplate](https://github.com/lifepillar/vim-colortemplate).
