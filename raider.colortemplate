@@ -85,18 +85,18 @@ Delimiter -> Special
 SpecialComment -> Special
 Debug -> Special
 
-ErrorMsg red bg bold
+ErrorMsg red omit bold
 Error -> ErrorMsg
-WarningMsg yellow bg bold
+WarningMsg yellow omit bold
 Warning -> WarningMsg
 
-ModeMsg teal bg
+ModeMsg teal omit
 MoreMsg -> ModeMsg
 Question -> ModeMsg
 
 Ignore -> NonText
-Todo green bg bold
-Underlined white bg underline
+Todo green omit bold
+Underlined white omit underline
 
 StatusLine wood layer
 StatusLineNC white_alt black_alt
@@ -110,42 +110,42 @@ TabLineSel -> StatusLine
 WildMenu yellow black_alt
 VertSplit black_alt black_alt
 
-Title wood bg bold
+Title wood omit bold
 
-LineNr white_alt bg
+LineNr white_alt omit
 LineNrAbove -> LineNr
 LineNrBelow -> LineNr
-CursorLineNr yellow black_alt
 Cursor black white
-CursorLine black_alt bg
+CursorLine omit black_alt
+CursorLineNr yellow black_alt
 CursorColumn -> CursorLine
-ColorColumn fg layer_alt
-SignColumn white_alt bg
+ColorColumn omit layer_alt
+SignColumn white_alt omit
 
-Visual fg layer
-VisualNOS fg layer
+Visual omit layer
+VisualNOS omit layer
 
-Pmenu fg black_alt
-PmenuSbar fg layer
+Pmenu omit black_alt
+PmenuSbar omit layer
 PmenuSel wood layer
-PmenuThumb teal teal
+PmenuThumb omit teal
 
-FoldColumn black_alt bg
+FoldColumn black_alt omit
 Folded white_alt layer_alt
 
-SpecialKey wood bg
+SpecialKey wood omit
 IncSearch black yellow
 Search black wood
 CurSearch -> IncSearch
-Directory teal bg
-MatchParen yellow bg bold
+Directory teal omit
+MatchParen yellow omit bold
 
-SpellBad red bg underline
-SpellCap green bg underline
-SpellLocal yellow bg underline
+SpellBad red omit underline
+SpellCap green omit underline
+SpellLocal yellow omit underline
 SpellRare -> SpellLocal
 
-QuickFixLine fg layer_alt
+QuickFixLine omit layer_alt
 
 DiffAdd green black_alt
 DiffChange fg black_alt
@@ -154,7 +154,7 @@ DiffText yellow black_alt
 diffAdded -> DiffAdd
 diffRemoved -> DiffDelete
 
-helpHyperTextJump teal black
+helpHyperTextJump teal bg
 htmlTag -> Delimiter
 htmlEndTag -> htmlTag
 gitcommitSummary -> Title
