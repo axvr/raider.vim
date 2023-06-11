@@ -85,9 +85,9 @@ Delimiter -> Special
 SpecialComment -> Special
 Debug -> Special
 
-ErrorMsg red omit bold
+ErrorMsg red bg bold
 Error -> ErrorMsg
-WarningMsg yellow omit bold
+WarningMsg yellow bg bold
 Warning -> WarningMsg
 
 ModeMsg teal omit
@@ -95,7 +95,7 @@ MoreMsg -> ModeMsg
 Question -> ModeMsg
 
 Ignore -> NonText
-Todo green omit bold
+Todo green bg bold
 Underlined white omit underline
 
 StatusLine wood layer
@@ -138,7 +138,7 @@ IncSearch black yellow
 Search black wood
 CurSearch -> IncSearch
 Directory teal omit
-MatchParen yellow omit bold
+MatchParen yellow black_alt bold
 
 SpellBad red omit underline
 SpellCap green omit underline
