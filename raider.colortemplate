@@ -5,6 +5,8 @@ Description: A Vim colour scheme for archaeological escapades.
 License:     MIT (2021)
 URL:         https://github.com/axvr/raider.vim
 
+Neovim: yes
+
 ;;; Colour palette.
 
 Variant:    gui 256
