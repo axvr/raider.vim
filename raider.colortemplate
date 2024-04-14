@@ -122,7 +122,7 @@ CursorLine omit black_alt
 CursorLineNr yellow black_alt
 CursorColumn -> CursorLine
 ColorColumn omit layer_alt
-SignColumn white_alt omit
+SignColumn white_alt bg
 
 Visual omit layer
 VisualNOS omit layer
