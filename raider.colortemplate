@@ -5,32 +5,30 @@ Description: A Vim colour scheme for archaeological escapades.
 License:     CC0 (Public domain)
 URL:         https://github.com/axvr/raider.vim
 
-Neovim: yes
 
 ;;; Colour palette.
 
+Neovim:     yes
 Variant:    gui 256
 Background: dark
 
-Color: brown     #88766f ~  ; Light redish-brown.
-Color: wood      #a79180 ~  ; Light yellowish-brown.
-Color: yellow    #eab56b ~  ; Pale brownish-yellow.
-Color: red       #a74f4f ~  ; Pale red.
+Color: void      #1a1a1a ~  ; Darkest background.
+Color: shadows   #222222 ~  ; Background.
+Color: shade     #2a2a2a ~  ; Lighter background.
+Color: hidden    #343434 ~  ; Invisible.
+Color: gun_metal #707070 ~  ; Faded forground.
+Color: snow      #c9c9c9 ~  ; Foreground.
 
+Color: top       #94baca ~  ; Teal.
+Color: shorts    #a79180 ~  ; Light yellowish-brown.
+Color: boots     #88766f ~  ; Light redish-brown.
+Color: snow_jacket #f0955f ~  ; Orange.
+
+Color: leaves    #679d80 ~  ; Pale blueish-green.
+Color: moss      #96a8a1 ~  ; Pale greenish-teal.
 Color: slate     #858ca6 ~  ; Purplish-blue.
-Color: teal      #94baca ~  ; Pale blueish-teal.
-Color: darkteal  #96a8a1 ~  ; Pale greenish-teal.
-Color: green     #679d80 ~  ; Pale blueish-green.
-
-Color: white     #c9c9c9 ~  ; Foreground.
-Color: white_alt #666967 ~  ; Darker foreground.
-Color: black     #222222 ~  ; Background.
-Color: black_alt #2a2a2a ~  ; Lighter background.
-
-Color: layer     #343434 ~  ; Layer on background.
-Color: layer_alt #1a1a1a ~
-
-Color: hidden    #4a4a4a ~
+Color: blood     #cf4c4c ~  ; Red.
+Color: gold      #ecb55d ~  ; Yellow.
 
 Color: term_b_blue    #3465a4 ~
 Color: term_b_magenta #75507b ~
@@ -43,36 +41,37 @@ Color: term_cyan      #34e2e2 ~
 
 ;;; Highlights.
 
-Normal white black
+Normal snow shadows
 NonText hidden bg
-Comment white_alt bg
+Comment gun_metal bg
 Conceal -> NonText
 EndOfBuffer -> NonText
+Delimiter -> Comment
 
-Constant brown bg
+Constant boots bg
 Character -> Constant
 Number -> Constant
 Float -> Number
 Boolean -> Constant
 
-String teal bg
+String top bg
 
-Identifier darkteal bg
+Identifier moss bg
 Function -> Identifier
 
-Statement wood bg
+Statement shorts bg
 Conditional -> Statement
 Repeat -> Statement
 Label -> Statement
-Exception red bg
+Exception snow_jacket bg
 
 Keyword slate bg
-Operator white bg
+Operator snow bg
 
-PreProc brown bg
+PreProc boots bg
 Include -> PreProc
 Macro -> PreProc
-Define wood bg
+Define shorts bg
 PreCondit -> Define
 
 Type slate bg
@@ -80,28 +79,28 @@ StorageClass -> Type
 Structure -> Type
 Typedef -> Type
 
-Special white_alt bg
+Special boots bg
 SpecialChar -> Special
 Tag -> Special
-Delimiter -> Special
 SpecialComment -> Special
 Debug -> Special
+SpecialKey -> Special
 
-ErrorMsg red bg bold
+ErrorMsg blood bg bold
 Error -> ErrorMsg
-WarningMsg yellow bg bold
+WarningMsg snow_jacket bg bold
 Warning -> WarningMsg
 
-ModeMsg teal omit
+ModeMsg top omit
 MoreMsg -> ModeMsg
 Question -> ModeMsg
 
 Ignore -> NonText
-Todo green bg bold
-Underlined white omit underline
+Todo leaves bg bold
+Underlined top omit underline
 
-StatusLine wood layer
-StatusLineNC white_alt black_alt
+StatusLine shorts hidden
+StatusLineNC gun_metal shade
 StatusLineTerm -> StatusLine
 StatusLineTermNC -> StatusLineNC
 
@@ -109,54 +108,56 @@ TabLine -> StatusLineNC
 TabLineFill -> StatusLineNC
 TabLineSel -> StatusLine
 
-WildMenu yellow black_alt
-VertSplit black_alt black_alt
+WildMenu gold shade
+VertSplit gun_metal omit
+WinSeparator -> VertSplit
+NormalFloat -> Normal
+FloatBorder -> WinSeparator
 
-Title wood omit bold
+Title shorts omit bold
 
-LineNr white_alt omit
+LineNr gun_metal omit
 LineNrAbove -> LineNr
 LineNrBelow -> LineNr
-Cursor black white
-CursorLine omit black_alt
-CursorLineNr yellow black_alt
+Cursor shadows snow
+CursorLine omit shade
+CursorLineNr gold shade
 CursorColumn -> CursorLine
-ColorColumn omit layer_alt
-SignColumn white_alt bg
+ColorColumn omit void
+SignColumn gun_metal bg
 
-Visual omit layer
-VisualNOS omit layer
+Visual omit hidden
+VisualNOS omit hidden
 
-Pmenu omit black_alt
-PmenuSbar omit layer
-PmenuSel wood layer
-PmenuThumb omit teal
+Pmenu omit shade
+PmenuSbar omit hidden
+PmenuSel gold hidden
+PmenuThumb omit gun_metal
 
-FoldColumn black_alt omit
-Folded white_alt layer_alt
+FoldColumn shade omit
+Folded gun_metal void
 
-SpecialKey wood omit
-IncSearch black yellow
-Search black wood
+IncSearch shadows gold
+Search shadows top
 CurSearch -> IncSearch
-Directory teal omit
-MatchParen yellow black_alt bold
+Directory top omit
+MatchParen gold shade bold
 
-SpellBad red omit underline
-SpellCap green omit underline
-SpellLocal yellow omit underline
-SpellRare -> SpellLocal
+SpellBad blood omit underline
+SpellCap snow_jacket omit underline
+SpellLocal -> SpellCap
+SpellRare gold omit underline
 
-QuickFixLine omit layer_alt
+QuickFixLine none void
 
-DiffAdd green black_alt
-DiffChange fg black_alt
-DiffDelete red black_alt
-DiffText yellow black_alt
+DiffAdd leaves shade
+DiffChange fg shade
+DiffDelete blood shade
+DiffText gold shade
 diffAdded -> DiffAdd
 diffRemoved -> DiffDelete
 
-helpHyperTextJump teal bg
+helpHyperTextJump top bg
 htmlTag -> Delimiter
 htmlEndTag -> htmlTag
 gitcommitSummary -> Title
@@ -165,5 +166,5 @@ gitcommitSummary -> Title
 ;;; Integrated terminal colours.
 
 ;;           black     red      green      yellow  blue        magenta        cyan        white
-Term Colors: black     red      green      wood    term_b_blue term_b_magenta term_b_cyan white_alt  ; Bold
-Term Colors: black_alt term_red term_green yellow  teal        term_magenta   term_cyan   white      ; Normal
+Term Colors: shadows   blood    leaves     gold    term_b_blue term_b_magenta term_b_cyan gun_metal  ; Bold
+Term Colors: shade     term_red term_green shorts  top         term_magenta   term_cyan   snow       ; Normal
