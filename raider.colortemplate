@@ -31,12 +31,9 @@ Color: blood     #cf4c4c ~  ; Red.
 Color: gold      #ecb55d ~  ; Yellow.
 
 Color: term_b_blue    #3465a4 ~
+Color: term_b_green   #2bb469 ~
 Color: term_b_magenta #75507b ~
-Color: term_b_cyan    #29acc1 ~
-Color: term_red       #c61c29 ~
-Color: term_green     #2bb469 ~
 Color: term_magenta   #c061cb ~
-Color: term_cyan      #34e2e2 ~
 
 
 ;;; Highlights.
@@ -79,12 +76,12 @@ StorageClass -> Type
 Structure -> Type
 Typedef -> Type
 
-Special boots none
+Special gun_metal none
 SpecialChar -> Special
-Tag -> Special
 SpecialComment -> Special
-Debug -> Special
 SpecialKey -> Special
+Tag -> Special
+Debug -> Special
 
 ErrorMsg blood none bold
 Error -> ErrorMsg
@@ -165,6 +162,6 @@ gitcommitSummary -> Title
 
 ;;; Integrated terminal colours.
 
-;;           black     red      green      yellow  blue        magenta        cyan        white
-Term Colors: shadows   blood    leaves     gold    term_b_blue term_b_magenta term_b_cyan gun_metal  ; Bold
-Term Colors: shade     term_red term_green shorts  top         term_magenta   term_cyan   snow       ; Normal
+;;           black     red    green         yellow  blue         magenta         cyan   white
+Term Colors: shadows   boots  term_b_green  gold    term_b_blue  term_b_magenta  moss   gun_metal  ; Bold
+Term Colors: shade     blood  leaves        shorts  top          term_magenta    slate  snow       ; Normal
