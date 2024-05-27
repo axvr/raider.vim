@@ -42,62 +42,62 @@ Color: term_cyan      #34e2e2 ~
 ;;; Highlights.
 
 Normal snow shadows
-NonText hidden bg
-Comment gun_metal bg
+NonText hidden none
+Comment gun_metal none
 Conceal -> NonText
 EndOfBuffer -> NonText
 Delimiter -> Comment
 
-Constant boots bg
+Constant boots none
 Character -> Constant
 Number -> Constant
 Float -> Number
 Boolean -> Constant
 
-String top bg
+String top none
 
-Identifier moss bg
+Identifier moss none
 Function -> Identifier
 
-Statement shorts bg
+Statement shorts none
 Conditional -> Statement
 Repeat -> Statement
 Label -> Statement
-Exception snow_jacket bg
+Exception snow_jacket none
 
-Keyword slate bg
-Operator snow bg
+Keyword slate none
+Operator snow none
 
-PreProc boots bg
+PreProc boots none
 Include -> PreProc
 Macro -> PreProc
-Define shorts bg
+Define shorts none
 PreCondit -> Define
 
-Type slate bg
+Type slate none
 StorageClass -> Type
 Structure -> Type
 Typedef -> Type
 
-Special boots bg
+Special boots none
 SpecialChar -> Special
 Tag -> Special
 SpecialComment -> Special
 Debug -> Special
 SpecialKey -> Special
 
-ErrorMsg blood bg bold
+ErrorMsg blood none bold
 Error -> ErrorMsg
-WarningMsg snow_jacket bg bold
+WarningMsg snow_jacket none bold
 Warning -> WarningMsg
 
-ModeMsg top omit
+ModeMsg top none
 MoreMsg -> ModeMsg
 Question -> ModeMsg
 
 Ignore -> NonText
-Todo leaves bg bold
-Underlined top omit underline
+Todo leaves none bold
+Underlined top none underline
 
 StatusLine shorts hidden
 StatusLineNC gun_metal shade
@@ -109,55 +109,55 @@ TabLineFill -> StatusLineNC
 TabLineSel -> StatusLine
 
 WildMenu gold shade
-VertSplit gun_metal omit
+VertSplit gun_metal none
 WinSeparator -> VertSplit
 NormalFloat -> Normal
 FloatBorder -> WinSeparator
 
-Title shorts omit bold
+Title shorts none bold
 
-LineNr gun_metal omit
+LineNr gun_metal none
 LineNrAbove -> LineNr
 LineNrBelow -> LineNr
 Cursor shadows snow
-CursorLine omit shade
+CursorLine none shade
 CursorLineNr gold shade
 CursorColumn -> CursorLine
-ColorColumn omit void
-SignColumn gun_metal bg
+ColorColumn none void
+SignColumn gun_metal none
 
-Visual omit hidden
-VisualNOS omit hidden
+Visual none hidden
+VisualNOS none hidden
 
-Pmenu omit shade
-PmenuSbar omit hidden
+Pmenu none shade
+PmenuSbar none hidden
 PmenuSel gold hidden
-PmenuThumb omit gun_metal
+PmenuThumb none gun_metal
 
-FoldColumn shade omit
+FoldColumn shade none
 Folded gun_metal void
 
 IncSearch shadows gold
 Search shadows top
 CurSearch -> IncSearch
-Directory top omit
+Directory top none
 MatchParen gold shade bold
 
-SpellBad blood omit underline
-SpellCap snow_jacket omit underline
+SpellBad blood none underline
+SpellCap snow_jacket none underline
 SpellLocal -> SpellCap
-SpellRare gold omit underline
+SpellRare gold none underline
 
 QuickFixLine none void
 
 DiffAdd leaves shade
-DiffChange fg shade
+DiffChange none shade
 DiffDelete blood shade
 DiffText gold shade
 diffAdded -> DiffAdd
 diffRemoved -> DiffDelete
 
-helpHyperTextJump top bg
+helpHyperTextJump top none
 htmlTag -> Delimiter
 htmlEndTag -> htmlTag
 gitcommitSummary -> Title
