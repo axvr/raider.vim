@@ -154,12 +154,12 @@ DiffText gold shade
 diffAdded -> DiffAdd
 diffRemoved -> DiffDelete
 Added -> DiffAdd
-Changed -> DiffChange
+Changed -> DiffText
 Removed -> DiffDelete
 
-DiagnosticError -> ErrorMsg
+DiagnosticError blood none bold
 DiagnosticUnderlineError blood none underline
-DiagnosticWarn -> WarningMsg
+DiagnosticWarn snow_jacket none bold
 DiagnosticUnderlineWarn snow_jacket none underline
 DiagnosticInfo gold none bold
 DiagnosticUnderlineInfo gold none underline
@@ -167,8 +167,8 @@ DiagnosticHint top none bold
 DiagnosticUnderlineHint top none underline
 DiagnosticOk leaves none bold
 DiagnosticUnderlineOk leaves none underline
-DiagnosticDeprecated -> Comment
-DiagnosticUnnecessary -> Comment
+DiagnosticDeprecated gun_metal none bold
+DiagnosticUnnecessary gun_metal none bold
 
 helpHyperTextJump top none
 htmlTag -> Delimiter

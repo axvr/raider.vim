@@ -129,11 +129,11 @@ hi DiffText guifg=#ecb55d guibg=#2a2a2a gui=NONE cterm=NONE
 hi! link diffAdded DiffAdd
 hi! link diffRemoved DiffDelete
 hi! link Added DiffAdd
-hi! link Changed DiffChange
+hi! link Changed DiffText
 hi! link Removed DiffDelete
-hi! link DiagnosticError ErrorMsg
+hi DiagnosticError guifg=#cf4c4c guibg=NONE gui=bold cterm=bold
 hi DiagnosticUnderlineError guifg=#cf4c4c guibg=NONE gui=underline cterm=underline
-hi! link DiagnosticWarn WarningMsg
+hi DiagnosticWarn guifg=#f0955f guibg=NONE gui=bold cterm=bold
 hi DiagnosticUnderlineWarn guifg=#f0955f guibg=NONE gui=underline cterm=underline
 hi DiagnosticInfo guifg=#ecb55d guibg=NONE gui=bold cterm=bold
 hi DiagnosticUnderlineInfo guifg=#ecb55d guibg=NONE gui=underline cterm=underline
@@ -141,8 +141,8 @@ hi DiagnosticHint guifg=#94baca guibg=NONE gui=bold cterm=bold
 hi DiagnosticUnderlineHint guifg=#94baca guibg=NONE gui=underline cterm=underline
 hi DiagnosticOk guifg=#679d80 guibg=NONE gui=bold cterm=bold
 hi DiagnosticUnderlineOk guifg=#679d80 guibg=NONE gui=underline cterm=underline
-hi! link DiagnosticDeprecated Comment
-hi! link DiagnosticUnnecessary Comment
+hi DiagnosticDeprecated guifg=#707070 guibg=NONE gui=bold cterm=bold
+hi DiagnosticUnnecessary guifg=#707070 guibg=NONE gui=bold cterm=bold
 hi helpHyperTextJump guifg=#94baca guibg=NONE gui=NONE cterm=NONE
 hi! link htmlTag Delimiter
 hi! link htmlEndTag htmlTag
@@ -242,11 +242,11 @@ if s:t_Co >= 256
   hi! link diffAdded DiffAdd
   hi! link diffRemoved DiffDelete
   hi! link Added DiffAdd
-  hi! link Changed DiffChange
+  hi! link Changed DiffText
   hi! link Removed DiffDelete
-  hi! link DiagnosticError ErrorMsg
+  hi DiagnosticError ctermfg=167 ctermbg=NONE cterm=bold
   hi DiagnosticUnderlineError ctermfg=167 ctermbg=NONE cterm=underline
-  hi! link DiagnosticWarn WarningMsg
+  hi DiagnosticWarn ctermfg=173 ctermbg=NONE cterm=bold
   hi DiagnosticUnderlineWarn ctermfg=173 ctermbg=NONE cterm=underline
   hi DiagnosticInfo ctermfg=179 ctermbg=NONE cterm=bold
   hi DiagnosticUnderlineInfo ctermfg=179 ctermbg=NONE cterm=underline
@@ -254,8 +254,8 @@ if s:t_Co >= 256
   hi DiagnosticUnderlineHint ctermfg=109 ctermbg=NONE cterm=underline
   hi DiagnosticOk ctermfg=72 ctermbg=NONE cterm=bold
   hi DiagnosticUnderlineOk ctermfg=72 ctermbg=NONE cterm=underline
-  hi! link DiagnosticDeprecated Comment
-  hi! link DiagnosticUnnecessary Comment
+  hi DiagnosticDeprecated ctermfg=242 ctermbg=NONE cterm=bold
+  hi DiagnosticUnnecessary ctermfg=242 ctermbg=NONE cterm=bold
   hi helpHyperTextJump ctermfg=109 ctermbg=NONE cterm=NONE
   hi! link htmlTag Delimiter
   hi! link htmlEndTag htmlTag
