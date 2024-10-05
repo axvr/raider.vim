@@ -153,6 +153,22 @@ DiffDelete blood shade
 DiffText gold shade
 diffAdded -> DiffAdd
 diffRemoved -> DiffDelete
+Added -> DiffAdd
+Changed -> DiffChange
+Removed -> DiffDelete
+
+DiagnosticError -> ErrorMsg
+DiagnosticUnderlineError blood none underline
+DiagnosticWarn -> WarningMsg
+DiagnosticUnderlineWarn snow_jacket none underline
+DiagnosticInfo gold none bold
+DiagnosticUnderlineInfo gold none underline
+DiagnosticHint top none bold
+DiagnosticUnderlineHint top none underline
+DiagnosticOk leaves none bold
+DiagnosticUnderlineOk leaves none underline
+DiagnosticDeprecated -> Comment
+DiagnosticUnnecessary -> Comment
 
 helpHyperTextJump top none
 htmlTag -> Delimiter
