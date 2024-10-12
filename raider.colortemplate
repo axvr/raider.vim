@@ -72,16 +72,16 @@ Define shorts none
 PreCondit -> Define
 
 Type slate none
-StorageClass -> Type
+StorageClass -> PreProc
 Structure -> Type
 Typedef -> Type
 
 Special gun_metal none
 SpecialChar -> Special
-SpecialComment -> Special
+SpecialComment gun_metal none italic
 SpecialKey -> Special
 Tag -> Special
-Debug -> Special
+Debug -> Exception
 
 ErrorMsg blood none bold
 Error -> ErrorMsg
