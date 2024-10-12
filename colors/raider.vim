@@ -38,11 +38,13 @@ if has('nvim')
   let g:terminal_color_15 = '#707070'
 endif
 hi Normal guifg=#c9c9c9 guibg=#222222 gui=NONE cterm=NONE
-hi NonText guifg=#343434 guibg=NONE gui=NONE cterm=NONE
 hi Comment guifg=#707070 guibg=NONE gui=NONE cterm=NONE
+hi SpecialComment guifg=#707070 guibg=NONE gui=bold cterm=bold
+hi! link Delimiter Comment
+hi NonText guifg=#343434 guibg=NONE gui=NONE cterm=NONE
 hi! link Conceal NonText
 hi! link EndOfBuffer NonText
-hi! link Delimiter Comment
+hi! link Ignore NonText
 hi Constant guifg=#88766f guibg=NONE gui=NONE cterm=NONE
 hi! link Character Constant
 hi! link Number Constant
@@ -51,27 +53,26 @@ hi! link Boolean Constant
 hi String guifg=#94baca guibg=NONE gui=NONE cterm=NONE
 hi Identifier guifg=#96a8a1 guibg=NONE gui=NONE cterm=NONE
 hi! link Function Identifier
+hi! link Operator Normal
 hi Statement guifg=#a79180 guibg=NONE gui=NONE cterm=NONE
 hi! link Conditional Statement
-hi! link Repeat Statement
-hi! link Label Statement
+hi! link Repeat Conditional
+hi Label guifg=#88766f guibg=NONE gui=NONE cterm=NONE
 hi Exception guifg=#f0955f guibg=NONE gui=NONE cterm=NONE
 hi Keyword guifg=#858ca6 guibg=NONE gui=NONE cterm=NONE
-hi Operator guifg=#c9c9c9 guibg=NONE gui=NONE cterm=NONE
 hi PreProc guifg=#88766f guibg=NONE gui=NONE cterm=NONE
 hi! link Include PreProc
-hi! link Macro PreProc
+hi! link PreCondit PreProc
 hi Define guifg=#a79180 guibg=NONE gui=NONE cterm=NONE
-hi! link PreCondit Define
+hi! link Macro Define
 hi Type guifg=#858ca6 guibg=NONE gui=NONE cterm=NONE
-hi! link StorageClass PreProc
+hi! link StorageClass Comment
 hi! link Structure Type
 hi! link Typedef Type
 hi Special guifg=#707070 guibg=NONE gui=NONE cterm=NONE
 hi! link SpecialChar Special
-hi SpecialComment guifg=#707070 guibg=NONE gui=italic cterm=italic
 hi! link SpecialKey Special
-hi! link Tag Special
+hi Tag guifg=#707070 guibg=NONE gui=italic cterm=italic
 hi! link Debug Exception
 hi ErrorMsg guifg=#cf4c4c guibg=NONE gui=bold cterm=bold
 hi! link Error ErrorMsg
@@ -80,7 +81,6 @@ hi! link Warning WarningMsg
 hi ModeMsg guifg=#94baca guibg=NONE gui=NONE cterm=NONE
 hi! link MoreMsg ModeMsg
 hi! link Question ModeMsg
-hi! link Ignore NonText
 hi Todo guifg=#679d80 guibg=NONE gui=bold cterm=bold
 hi Underlined guifg=#94baca guibg=NONE gui=underline cterm=underline
 hi StatusLine guifg=#a79180 guibg=#343434 gui=NONE cterm=NONE
@@ -148,17 +148,20 @@ hi helpHyperTextJump guifg=#94baca guibg=NONE gui=NONE cterm=NONE
 hi! link htmlTag Delimiter
 hi! link htmlEndTag htmlTag
 hi! link gitcommitSummary Title
+hi! link vimCommentTitle SpecialComment
 if !s:italics
-  hi SpecialComment gui=NONE cterm=NONE
+  hi Tag gui=NONE cterm=NONE
 endif
 
 if s:t_Co >= 256
   hi Normal ctermfg=251 ctermbg=235 cterm=NONE
-  hi NonText ctermfg=236 ctermbg=NONE cterm=NONE
   hi Comment ctermfg=242 ctermbg=NONE cterm=NONE
+  hi SpecialComment ctermfg=242 ctermbg=NONE cterm=bold
+  hi! link Delimiter Comment
+  hi NonText ctermfg=236 ctermbg=NONE cterm=NONE
   hi! link Conceal NonText
   hi! link EndOfBuffer NonText
-  hi! link Delimiter Comment
+  hi! link Ignore NonText
   hi Constant ctermfg=243 ctermbg=NONE cterm=NONE
   hi! link Character Constant
   hi! link Number Constant
@@ -167,27 +170,26 @@ if s:t_Co >= 256
   hi String ctermfg=109 ctermbg=NONE cterm=NONE
   hi Identifier ctermfg=109 ctermbg=NONE cterm=NONE
   hi! link Function Identifier
+  hi! link Operator Normal
   hi Statement ctermfg=137 ctermbg=NONE cterm=NONE
   hi! link Conditional Statement
-  hi! link Repeat Statement
-  hi! link Label Statement
+  hi! link Repeat Conditional
+  hi Label ctermfg=243 ctermbg=NONE cterm=NONE
   hi Exception ctermfg=173 ctermbg=NONE cterm=NONE
   hi Keyword ctermfg=103 ctermbg=NONE cterm=NONE
-  hi Operator ctermfg=251 ctermbg=NONE cterm=NONE
   hi PreProc ctermfg=243 ctermbg=NONE cterm=NONE
   hi! link Include PreProc
-  hi! link Macro PreProc
+  hi! link PreCondit PreProc
   hi Define ctermfg=137 ctermbg=NONE cterm=NONE
-  hi! link PreCondit Define
+  hi! link Macro Define
   hi Type ctermfg=103 ctermbg=NONE cterm=NONE
-  hi! link StorageClass PreProc
+  hi! link StorageClass Comment
   hi! link Structure Type
   hi! link Typedef Type
   hi Special ctermfg=242 ctermbg=NONE cterm=NONE
   hi! link SpecialChar Special
-  hi SpecialComment ctermfg=242 ctermbg=NONE cterm=italic
   hi! link SpecialKey Special
-  hi! link Tag Special
+  hi Tag ctermfg=242 ctermbg=NONE cterm=italic
   hi! link Debug Exception
   hi ErrorMsg ctermfg=167 ctermbg=NONE cterm=bold
   hi! link Error ErrorMsg
@@ -196,7 +198,6 @@ if s:t_Co >= 256
   hi ModeMsg ctermfg=109 ctermbg=NONE cterm=NONE
   hi! link MoreMsg ModeMsg
   hi! link Question ModeMsg
-  hi! link Ignore NonText
   hi Todo ctermfg=72 ctermbg=NONE cterm=bold
   hi Underlined ctermfg=109 ctermbg=NONE cterm=underline
   hi StatusLine ctermfg=137 ctermbg=236 cterm=NONE
@@ -264,8 +265,9 @@ if s:t_Co >= 256
   hi! link htmlTag Delimiter
   hi! link htmlEndTag htmlTag
   hi! link gitcommitSummary Title
+  hi! link vimCommentTitle SpecialComment
   if !s:italics
-    hi SpecialComment cterm=NONE
+    hi Tag cterm=NONE
   endif
   unlet s:t_Co s:italics
   finish

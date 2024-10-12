@@ -39,11 +39,16 @@ Color: term_magenta   #c061cb ~
 ;;; Highlights.
 
 Normal snow shadows
-NonText hidden none
+
 Comment gun_metal none
+SpecialComment gun_metal none bold
+
+Delimiter -> Comment
+
+NonText hidden none
 Conceal -> NonText
 EndOfBuffer -> NonText
-Delimiter -> Comment
+Ignore -> NonText
 
 Constant boots none
 Character -> Constant
@@ -55,32 +60,31 @@ String top none
 
 Identifier moss none
 Function -> Identifier
+Operator -> Normal
 
 Statement shorts none
 Conditional -> Statement
-Repeat -> Statement
-Label -> Statement
+Repeat -> Conditional
+Label boots none
 Exception snow_jacket none
 
 Keyword slate none
-Operator snow none
 
 PreProc boots none
 Include -> PreProc
-Macro -> PreProc
+PreCondit -> PreProc
 Define shorts none
-PreCondit -> Define
+Macro -> Define
 
 Type slate none
-StorageClass -> PreProc
+StorageClass -> Comment
 Structure -> Type
 Typedef -> Type
 
 Special gun_metal none
 SpecialChar -> Special
-SpecialComment gun_metal none italic
 SpecialKey -> Special
-Tag -> Special
+Tag gun_metal none italic
 Debug -> Exception
 
 ErrorMsg blood none bold
@@ -92,7 +96,6 @@ ModeMsg top none
 MoreMsg -> ModeMsg
 Question -> ModeMsg
 
-Ignore -> NonText
 Todo leaves none bold
 Underlined top none underline
 
@@ -174,6 +177,7 @@ helpHyperTextJump top none
 htmlTag -> Delimiter
 htmlEndTag -> htmlTag
 gitcommitSummary -> Title
+vimCommentTitle -> SpecialComment
 
 
 ;;; Integrated terminal colours.
