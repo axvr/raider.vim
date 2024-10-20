@@ -111,7 +111,7 @@ TabLineSel -> StatusLine
 WildMenu gold shade
 VertSplit gun_metal none
 WinSeparator -> VertSplit
-NormalFloat -> Normal
+NormalFloat snow shade
 FloatBorder -> WinSeparator
 
 Title shorts none bold
