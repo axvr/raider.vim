@@ -183,5 +183,5 @@ vimCommentTitle -> SpecialComment
 ;;; Integrated terminal colours.
 
 ;;           black     red    green         yellow  blue         magenta         cyan   white
-Term Colors: shade     blood  leaves        shorts  top          term_magenta    slate  snow       ; Normal
-Term Colors: shadows   boots  term_b_green  gold    term_b_blue  term_b_magenta  moss   gun_metal  ; Bold
+Term Colors: shade     blood  leaves        shorts  top          term_magenta    slate  snow   ; Normal
+Term Colors: gun_metal boots  term_b_green  gold    term_b_blue  term_b_magenta  moss   snow   ; Bright
