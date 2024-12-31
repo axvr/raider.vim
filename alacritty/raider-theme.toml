@@ -23,14 +23,14 @@ cyan = '#858ca6'
 white = '#c9c9c9'
 
 [colors.bright]
-black = '#222222'
+black = '#707070'
 red = '#88766f'
 green = '#2bb469'
 yellow = '#ecb55d'
 blue = '#3465a4'
 magenta = '#75507b'
 cyan = '#29acc1'
-white = '#707070'
+white = '#c9c9c9'
 
 [colors.search]
 matches = { foreground = '#222222', background = '#94baca' }
