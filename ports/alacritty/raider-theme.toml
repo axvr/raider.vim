@@ -2,7 +2,7 @@
 #
 # Public domain.  No rights reserved.
 #
-# https://github.com/axvr/raider.vim/blob/contrib/alacritty/raider-theme.toml
+# https://github.com/axvr/raider.vim/blob/master/ports/alacritty/raider-theme.toml
 
 [window]
 decorations_theme_variant = 'Dark'

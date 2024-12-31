@@ -24,7 +24,7 @@ colorscheme raider
 ## Ports
 
 Ghostty, Alacritty and GNU Emacs ports of this theme can be found on the
-[`contrib` branch](https://github.com/axvr/raider.vim/tree/contrib).
+[`ports` directory](https://github.com/axvr/raider.vim/tree/master/ports).
 
 
 ## Attribution
