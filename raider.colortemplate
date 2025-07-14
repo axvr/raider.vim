@@ -14,9 +14,10 @@ Background: dark
 
 Color: void      #1a1a1a ~  ; Darkest background.
 Color: shadows   #222222 ~  ; Background.
-Color: shade     #2a2a2a ~  ; Lighter background.
-Color: hidden    #343434 ~  ; Invisible.
-Color: gun_metal #707070 ~  ; Faded forground.
+Color: inactive  #2a2a2a ~  ; Inactive UI background.
+Color: shade     #343434 ~  ; Lighter background.
+Color: hidden    #4d4d4d ~  ; Invisible.
+Color: gun_metal #7e7e7e ~  ; Faded forground.
 Color: snow      #c9c9c9 ~  ; Foreground.
 
 Color: top       #94baca ~  ; Teal.
@@ -47,8 +48,9 @@ Delimiter -> Comment
 
 NonText hidden none
 Conceal -> NonText
-EndOfBuffer -> NonText
-Ignore -> NonText
+Whitesapce -> Conceal
+Ignore -> Conceal
+EndOfBuffer -> Conceal
 
 Constant boots none
 Character -> Constant
@@ -99,8 +101,8 @@ Question -> ModeMsg
 Todo leaves none bold
 Underlined top none underline
 
-StatusLine shorts hidden
-StatusLineNC gun_metal shade
+StatusLine shorts shade
+StatusLineNC gun_metal inactive
 StatusLineTerm -> StatusLine
 StatusLineTermNC -> StatusLineNC
 
@@ -126,12 +128,12 @@ CursorColumn -> CursorLine
 ColorColumn none void
 SignColumn gun_metal none
 
-Visual none hidden
-VisualNOS none hidden
+Visual shadows top
+VisualNOS shadows top
 
 Pmenu none shade
 PmenuSbar none hidden
-PmenuSel gold hidden
+PmenuSel -> IncSearch
 PmenuThumb none gun_metal
 
 FoldColumn shade none
@@ -150,10 +152,10 @@ SpellRare gold none underline
 
 QuickFixLine none void
 
-DiffAdd leaves shade
-DiffChange none shade
-DiffDelete blood shade
-DiffText gold shade
+DiffAdd leaves inactive
+DiffChange none inactive
+DiffDelete blood inactive
+DiffText gold inactive
 diffAdded -> DiffAdd
 diffRemoved -> DiffDelete
 Added -> DiffAdd
@@ -179,6 +181,8 @@ htmlEndTag -> htmlTag
 gitcommitSummary -> Title
 vimCommentTitle -> SpecialComment
 
+;; GitStatusLine shade leaves bold
+;; GitStatusLineNC shade moss bold
 
 ;;; Integrated terminal colours.
 

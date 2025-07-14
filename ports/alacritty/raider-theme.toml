@@ -10,10 +10,10 @@ decorations_theme_variant = 'Dark'
 [colors.primary]
 background = '#222222'
 foreground = '#c9c9c9'
-dim_foreground = '#707070'
+dim_foreground = '#7e7e7e'
 
 [colors.normal]
-black = '#2a2a2a'
+black = '#343434'
 red = '#cf4c4c'
 green = '#679d80'
 yellow = '#a79180'
@@ -23,7 +23,7 @@ cyan = '#858ca6'
 white = '#c9c9c9'
 
 [colors.bright]
-black = '#707070'
+black = '#7e7e7e'
 red = '#88766f'
 green = '#2bb469'
 yellow = '#ecb55d'
