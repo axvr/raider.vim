@@ -1,0 +1,325 @@
+<%
+    # RNB, A VIM COLORSCHEME TEMPLATE
+    # Author:        Romain Lafourcade (https://github.com/romainl)
+    # Canonical URL: https://github.com/romainl/vim-rnb
+
+    information = {
+        author:      "Alex Vear",
+        email:       "alex@vear.uk",
+        name:        "raider",
+        description: "A Vim colour scheme for archaeological escapades.",
+        background:  "dark",
+        webpage:     "https://github.com/axvr/raider.vim",
+        licence:     "MIT (2021)"
+    }
+
+    # Color palette:
+    #
+    # black = [       give each color a distinctive name
+    #   "#000000",    hexadecimal color used in GVim/MacVim or "NONE"
+    #   0,            integer between 0 and 255 used by terminals supporting 256 colors
+    #                 or "NONE"
+    #   "black"       color name used by less capable color terminals, can be "darkred",
+    #                 "red", "darkgreen", "green", "darkyellow", "yellow", "darkblue",
+    #                 "blue", "darkmagenta", "magenta", "black", "darkgrey", "grey",
+    #                 "white", or "NONE"
+    # ]
+    #
+    # If your colors are defined correctly, the resulting colorscheme is
+    # guaranteed to work in GVim (Windows/Linux), MacVim (MacOS), and any
+    # properly set up terminal emulator.
+
+    void      = ["#1a1a1a", 234, "black"]       # Darkest background.
+    shadows   = ["#222222", 235, "black"]       # Background.
+    inactive  = ["#2a2a2a", 235, "darkgrey"]    # Inactive UI background.
+    shade     = ["#343434", 236, "darkgrey"]    # Lighter background.
+    hidden    = ["#4d4d4d", 239, "darkgrey"]    # Invisible.
+    gun_metal = ["#7e7e7e", 244, "grey"]        # Faded foreground.
+    snow      = ["#c9c9c9", 251, "white"]       # Foreground.
+
+    top       = ["#94baca", 109, "blue"]        # Teal.
+    shorts    = ["#a79180", 137, "darkyellow"]  # Light yellowish-brown.
+    boots     = ["#88766f", 243, "darkyellow"]  # Light redish-brown.
+    jacket    = ["#f0955f", 173, "red"]         # Orange.
+
+    leaves    = ["#679d80",  72, "green"]       # Pale blueish-green.
+    moss      = ["#96a8a1", 109, "green"]       # Pale greenish-teal.
+    slate     = ["#858ca6", 103, "darkblue"]    # Purplish-blue.
+    blood     = ["#cf4c4c", 167, "darkred"]     # Red.
+    gold      = ["#ecb55d", 179, "yellow"]      # Yellow.
+
+    bg = shadows
+    fg = snow
+
+    # Highlights:
+    #
+    # You can define highlight groups like this:
+    #
+    #   [ "Normal",       name of the highlight group
+    #     white,          the color used for background color, or use "NONE", "fg" or "bg"
+    #     darkgray,       the color used for foreground color, or use "NONE", "fg" or "bg"
+    #     "NONE"          style, can be "bold", "underline", "reverse", "italic",
+    #                     "standout", "NONE" or "undercurl"
+    #   ]
+    #
+    # The sample above tells Vim to render normal text in dark gray against
+    # a white background, without any other styling.
+    #
+    # Or you can link an highlight group to another. Here, "Title" will inherit
+    # its style from "Normal":
+    #
+    #   [ "Title", "Normal" ]
+    #
+    # In GUI Vim, there is an additional color for the undercurl used to
+    # highlight spelling mistakes:
+    #
+    #   [ "SpellBad",     name of the highlight group
+    #     "NONE",         the color used for background color, or use "NONE", "fg" or "bg"
+    #     red,            the color used for foreground color, or use "NONE", "fg" or "bg"
+    #     "undercurl",    style
+    #     red             color used for the undercurl
+    #   ]
+    #
+    # The sample above tells Vim to render badly spelled words in red against
+    # the current background, with a red undercurl.
+
+    highlights = [
+        [ "Normal", bg, fg, "NONE" ],
+
+        [ "Comment", "NONE", gun_metal, "NONE" ],
+        [ "SpecialComment", "NONE", gun_metal, "bold" ],
+
+        [ "Delimiter", "Comment" ],
+
+        [ "NonText", "NONE", hidden, "NONE" ],
+        [ "Conceal", "NonText" ],
+        [ "Whitespace", "Conceal" ],
+        [ "Ignore", "Conceal" ],
+        [ "EndOfBuffer", "Conceal" ],
+
+        [ "Constant", "NONE", boots, "NONE" ],
+        [ "Character", "Constant" ],
+        [ "Number", "Constant" ],
+        [ "Float", "Number" ],
+        [ "Boolean", "Constant" ],
+
+        [ "String", "NONE", top, "NONE" ],
+
+        [ "Identifier", "NONE", moss, "NONE" ],
+        [ "Function", "Identifier" ],
+        [ "Operator", "Normal" ],
+
+        [ "Statement", "NONE", shorts, "NONE" ],
+        [ "Conditonal", "Statement" ],
+        [ "Repeat", "Conditional" ],
+        [ "Label", "NONE", boots, "NONE" ],
+
+        [ "Exception", "NONE", jacket, "NONE" ],
+        [ "Debug", "Exception" ],
+
+        [ "Keyword", "NONE", slate, "NONE" ],
+
+        [ "PreProc", "NONE", boots, "NONE" ],
+        [ "Include", "PreProc" ],
+        [ "PreCondit", "PreProc" ],
+        [ "Define", "NONE", shorts, "NONE" ],
+        [ "Macro", "Define" ],
+
+        [ "Type", "NONE", slate, "NONE" ],
+        [ "StorageClass", "Comment" ],
+        [ "Structure", "Type" ],
+        [ "Typedef", "Type" ],
+
+        [ "Special", "NONE", gun_metal, "NONE" ],
+        [ "SpecialChar", "Special" ],
+        [ "SpecialKey", "Special" ],
+        [ "Tag", "NONE", gun_metal, "italic" ],
+
+        [ "ErrorMsg", "NONE", blood, "bold" ],
+        [ "Error", "ErrorMsg" ],
+        [ "WarningMsg", "NONE", jacket, "bold" ],
+        [ "Warning", "WarningMsg" ],
+
+        [ "ModeMsg", "NONE", top, "NONE" ],
+        [ "MoreMsg", "ModeMsg" ],
+        [ "Question", "ModeMsg" ],
+
+        [ "Todo", "NONE", leaves, "bold" ],
+        [ "Underlined", "NONE", top, "underline" ],
+        [ "Directory", "NONE", top, "NONE" ],
+
+        [ "StatusLine", shade, shorts, "NONE" ],
+        [ "StatusLineNC", inactive, gun_metal, "NONE" ],
+        [ "StatusLineTerm", "StatusLine" ],
+        [ "StatusLineTermNC", "StatusLineNC" ],
+
+        [ "TabLine", "StatusLineNC" ],
+        [ "TabLineFill", "StatusLineNC" ],
+        [ "TabLineSel", "StatusLine" ],
+
+        [ "WildMenu", shade, gold, "NONE" ],
+        [ "VertSplit", "NONE", gun_metal, "NONE" ],
+        [ "WinSeparator", "VertSplit" ],
+        [ "NormalFloat", shade, snow, "NONE" ],
+        [ "FloatBorder", "WinSeparator" ],
+
+        [ "Title", "NONE", shorts, "bold" ],
+
+        [ "LineNr", "NONE", gun_metal, "NONE" ],
+        [ "LineNrAbove", "LineNr" ],
+        [ "LineNrBelow", "LineNr" ],
+        [ "Cursor", snow, shadows, "NONE" ],
+        [ "CursorLine", shade, "NONE", "NONE" ],
+        [ "CursorLineNr", shade, gold, "NONE" ],
+        [ "CursorColumn", "CursorLine" ],
+        [ "ColorColumn", void, "NONE", "NONE" ],
+        [ "SignColumn", "NONE", gun_metal, "NONE" ],
+
+        [ "Visual", top, shadows, "NONE" ],
+        [ "VisualNOS", "Visual" ],
+
+        [ "Pmenu", shade, "NONE", "NONE" ],
+        [ "PmenuSbar", hidden, "NONE", "NONE" ],
+        [ "PmenuSel", "IncSearch" ],
+        [ "PmenuThumb", gun_metal, "NONE", "NONE" ],
+
+        [ "FoldColumn", "NONE", shade, "NONE" ],
+        [ "Folded", void, gun_metal, "NONE" ],
+
+        [ "IncSearch", gold, shadows, "NONE" ],
+        [ "Search", top, shadows, "NONE" ],
+        [ "CurSearch", "IncSearch" ],
+        [ "MatchParen", shade, gold, "bold" ],
+
+        [ "SpellBad", "NONE", blood, "underline" ],
+        [ "SpellCap", "NONE", jacket, "underline" ],
+        [ "SpellLocal", "SpellCap" ],
+        [ "SpellRare", "NONE", gold, "underline" ],
+
+        [ "QuickFixLine", void, "NONE", "NONE" ],
+
+        [ "DiffAdd", inactive, leaves, "NONE" ],
+        [ "DiffChange", inactive, "NONE", "NONE" ],
+        [ "DiffDelete", inactive, blood, "NONE" ],
+        [ "DiffText", inactive, gold, "NONE" ],
+        [ "diffAdded", "DiffAdd" ],
+        [ "diffRemoved", "DiffDelete" ],
+        [ "Added", "DiffAdd" ],
+        [ "Changed", "DiffText" ],
+        [ "Removed", "DiffDelete" ],
+
+        [ "DiagnosticError", "NONE", blood, "bold" ],
+        [ "DiagnosticUnderlineError", "NONE", blood, "underline" ],
+        [ "DiagnosticWarn", "NONE", jacket, "bold" ],
+        [ "DiagnosticUnderlineWarn", "NONE", jacket, "underline" ],
+        [ "DiagnosticInfo", "NONE", gold, "bold" ],
+        [ "DiagnosticUnderlineInfo", "NONE", gold, "underline" ],
+        [ "DiagnosticHint", "NONE", top, "bold" ],
+        [ "DiagnosticUnderlineHint", "NONE", top, "underline" ],
+        [ "DiagnosticOk", "NONE", leaves, "bold" ],
+        [ "DiagnosticUnderlineOk", "NONE", leaves, "underline" ],
+        [ "DiagnosticDeprecated", "NONE", gun_metal, "bold" ],
+        [ "DiagnosticUnnecessary", "NONE", gun_metal, "bold" ],
+
+        [ "helpHyperTextJump", "NONE", top, "NONE" ],
+        [ "htmlTag", "Delimiter" ],
+        [ "htmlEndTag", "htmlTag" ],
+        [ "gitcommitSummary", "Title" ],
+        [ "vimCommentTitle", "SpecialComment" ]
+    ]
+
+    # Define the color palette used by :terminal when in GUI Vim or in TUI Vim
+    # when 'termguicolors' is enabled. If this list is empty or if it doesn't
+    # contain exactly 16 items, the corresponding Vim variable won't be set.
+    terminal_ansi_colors = [
+        # Dark
+        shade,        # black
+        blood,        # red
+        leaves,       # green
+        shorts,       # yellow
+        top,          # blue
+        ["#c061cb"],  # magenta
+        slate,        # cyan
+        snow,         # white
+
+        # Bright
+        gun_metal,    # black
+        boots,        # red
+        ["#2bb469"],  # green
+        gold,         # yellow
+        ["#3465a4"],  # blue
+        ["#75507b"],  # magenta
+        moss,         # cyan
+        snow          # white
+    ]
+
+    # Many thanks to Barry Arthur (https://github.com/dahu) for the original idea.
+-%>
+" Name:        <%= information[:name] %>.vim
+" Author:      <%= information[:author] %> <<%= information[:email] %>>
+" Webpage:     <%= information[:webpage] %>
+" Description: <%= information[:description] %>
+" Licence:     <%= information[:licence] %>
+" Last Change: <%= Time.new.strftime "%Y-%m-%d" %>
+" Generator:   Modified version of RNB (https://github.com/romainl/vim-rnb)
+
+hi clear
+if exists("syntax_on")
+  syntax reset
+endif
+
+let colors_name = "<%= information[:name].downcase %>"
+
+if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
+<% for highlight in highlights -%>
+<% if highlight.length == 4 -%>
+    hi <%= highlight[0] %> ctermbg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][1] %> ctermfg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][1] %> cterm=<%= highlight[3] %> guibg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][0] %> guifg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][0] %> gui=<%= highlight[3] %>
+<% if highlight[0] == "Normal" -%>
+<%= '' %>
+    set background=<%= information[:background] %>
+<%= '' %>
+<% end -%>
+<% elsif highlight.length > 4 -%>
+    hi <%= highlight[0] %> ctermbg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][1] %> ctermfg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][1] %> cterm=<%= highlight[3] %> guibg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][0] %> guifg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][0] %> gui=<%= highlight[3] %> guisp=<%= highlight[4].kind_of?(String) ? highlight[4] : highlight[4][0] %>
+<% end -%>
+<% end -%>
+
+elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
+    set t_Co=16
+<%= '' %>
+<% for highlight in highlights -%>
+<% if highlight.length > 2 -%>
+    hi <%= highlight[0] %> ctermbg=<%= highlight[1].kind_of?(String) ? highlight[1] : highlight[1][2] %> ctermfg=<%= highlight[2].kind_of?(String) ? highlight[2] : highlight[2][2] %> cterm=<%= highlight[3] %>
+<% if highlight[0] == "Normal" -%>
+<%= '' %>
+    set background=<%= information[:background] %>
+<%= '' %>
+<% end -%>
+<% end -%>
+<% end -%>
+endif
+<% links = highlights.select do |highlight| -%>
+<% highlight.length == 2 -%>
+<% end -%>
+<% if links.length > 0 -%>
+<%= '' %>
+<% for link in links -%>
+hi! link <%= link[0] %> <%= link[1] %>
+<% end -%>
+<% end -%>
+<% if terminal_ansi_colors.length == 16 -%>
+<%= '' %>
+if (has('termguicolors') && &termguicolors) || has('gui_running')
+    if has('nvim')
+<% terminal_ansi_colors.each_with_index do |color,index| -%>
+        let g:terminal_color_<%= index %> = '<%= color[0] %>'
+<% end -%>
+    else
+        let g:terminal_ansi_colors = [
+<% for color in terminal_ansi_colors -%>
+                \ '<%= color[0] %>',
+<% end -%>
+                \ ]
+    endif
+endif
+<% end -%>

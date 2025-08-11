@@ -1,0 +1,11 @@
+#!/usr/bin/env -S execlineb -W
+
+# Install the Vim colorscheme locally.
+
+importas -i home HOME
+define dest-dir ${home}/.vim/colors/
+
+foreground { do/build }
+foreground { mkdir -p $dest-dir }
+
+cp colors/raider.vim ${dest-dir}/raider.vim

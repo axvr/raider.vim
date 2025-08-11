@@ -29,7 +29,10 @@ Ghostty, Alacritty and GNU Emacs ports of this theme can be found on the
 
 ## Attribution
 
-Built with [Vim Colourtemplate](https://github.com/lifepillar/vim-colortemplate).
+Made possible thanks to Romain Lafourcade's [Vim-RNB](https://github.com/romainl/vim-rnb)
+Vim colour scheme template.
+
+Fallback xterm-256 colours were selected using [`colours.clj`](https://github.com/axvr/codedump/tree/master/2021/colours).
 
 
 ## Legal

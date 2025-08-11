@@ -1,0 +1,4 @@
+#!/usr/bin/env -S execlineb -W
+
+redirfd -w 1 colors/raider.vim
+erb -T - raider.erb

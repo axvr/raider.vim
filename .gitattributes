@@ -1,3 +1,2 @@
-# See: https://ascribe.axvr.uk
-*     text=auto  eol=lf  trim-trailing-whitespace  final-newline
-*.md  expand-tab  tab-stop=4
+*      text=auto
+*.erb  linguist-language=Ruby
