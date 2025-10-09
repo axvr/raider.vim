@@ -31,10 +31,10 @@
 
     void      = ["#1a1a1a", 234, "black"]       # Darkest background.
     shadows   = ["#222222", 235, "black"]       # Background.
-    inactive  = ["#2a2a2a", 235, "darkgrey"]    # Inactive UI background.
-    shade     = ["#343434", 236, "darkgrey"]    # Lighter background.
+    inactive  = ["#2c2c2c", 235, "darkgrey"]    # Inactive UI background.
+    shade     = ["#363636", 236, "darkgrey"]    # Lighter background.
     hidden    = ["#4d4d4d", 239, "darkgrey"]    # Invisible.
-    gun_metal = ["#7e7e7e", 244, "grey"]        # Faded foreground.
+    gun_metal = ["#828282", 244, "grey"]        # Faded foreground.
     snow      = ["#c9c9c9", 251, "white"]       # Foreground.
 
     top       = ["#94baca", 109, "blue"]        # Teal.
@@ -48,6 +48,7 @@
     blood     = ["#cf4c4c", 167, "darkred"]     # Red.
     gold      = ["#ecb55d", 179, "yellow"]      # Yellow.
 
+    glow = inactive
     bg = shadows
     fg = snow
 
@@ -144,7 +145,7 @@
         [ "MoreMsg", "ModeMsg" ],
         [ "Question", "ModeMsg" ],
 
-        [ "Todo", "NONE", leaves, "bold" ],
+        [ "Todo", glow, leaves, "bold" ],
         [ "Underlined", "NONE", top, "underline" ],
         [ "Directory", "NONE", top, "NONE" ],
 
@@ -169,13 +170,13 @@
         [ "LineNrAbove", "LineNr" ],
         [ "LineNrBelow", "LineNr" ],
         [ "Cursor", snow, shadows, "NONE" ],
-        [ "CursorLine", shade, "NONE", "NONE" ],
-        [ "CursorLineNr", shade, gold, "NONE" ],
+        [ "CursorLine", glow, "NONE", "NONE" ],
+        [ "CursorLineNr", glow, gold, "NONE" ],
         [ "CursorColumn", "CursorLine" ],
         [ "ColorColumn", void, "NONE", "NONE" ],
         [ "SignColumn", "NONE", gun_metal, "NONE" ],
 
-        [ "Visual", top, shadows, "NONE" ],
+        [ "Visual", shade, "NONE", "NONE" ],
         [ "VisualNOS", "Visual" ],
 
         [ "Pmenu", shade, "NONE", "NONE" ],
@@ -198,10 +199,10 @@
 
         [ "QuickFixLine", void, "NONE", "NONE" ],
 
-        [ "DiffAdd", inactive, leaves, "NONE" ],
-        [ "DiffChange", inactive, "NONE", "NONE" ],
-        [ "DiffDelete", inactive, blood, "NONE" ],
-        [ "DiffText", inactive, gold, "NONE" ],
+        [ "DiffAdd", glow, leaves, "NONE" ],
+        [ "DiffChange", glow, "NONE", "NONE" ],
+        [ "DiffDelete", glow, blood, "NONE" ],
+        [ "DiffText", glow, gold, "NONE" ],
         [ "diffAdded", "DiffAdd" ],
         [ "diffRemoved", "DiffDelete" ],
         [ "Added", "DiffAdd" ],
