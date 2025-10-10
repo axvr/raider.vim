@@ -3,7 +3,7 @@
 " Webpage:     https://github.com/axvr/raider.vim
 " Description: A Vim colour scheme for archaeological escapades.
 " Licence:     MIT (2021)
-" Last Change: 2025-10-09
+" Last Change: 2025-10-10
 " Generator:   Modified version of RNB (https://github.com/romainl/vim-rnb)
 
 hi clear
@@ -39,8 +39,8 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Todo ctermbg=235 ctermfg=72 cterm=bold guibg=#2c2c2c guifg=#679d80 gui=bold
     hi Underlined ctermbg=NONE ctermfg=109 cterm=underline guibg=NONE guifg=#94baca gui=underline
     hi Directory ctermbg=NONE ctermfg=109 cterm=NONE guibg=NONE guifg=#94baca gui=NONE
-    hi StatusLine ctermbg=236 ctermfg=137 cterm=NONE guibg=#363636 guifg=#a79180 gui=NONE
-    hi StatusLineNC ctermbg=235 ctermfg=244 cterm=NONE guibg=#2c2c2c guifg=#828282 gui=NONE
+    hi StatusLine ctermbg=236 ctermfg=137 cterm=bold guibg=#363636 guifg=#a79180 gui=bold
+    hi StatusLineNC ctermbg=235 ctermfg=244 cterm=bold guibg=#2c2c2c guifg=#828282 gui=bold
     hi WildMenu ctermbg=236 ctermfg=179 cterm=NONE guibg=#363636 guifg=#ecb55d gui=NONE
     hi VertSplit ctermbg=NONE ctermfg=244 cterm=NONE guibg=NONE guifg=#828282 gui=NONE
     hi NormalFloat ctermbg=236 ctermfg=251 cterm=NONE guibg=#363636 guifg=#c9c9c9 gui=NONE
@@ -63,7 +63,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi SpellBad ctermbg=NONE ctermfg=167 cterm=underline guibg=NONE guifg=#cf4c4c gui=underline
     hi SpellCap ctermbg=NONE ctermfg=173 cterm=underline guibg=NONE guifg=#f0955f gui=underline
     hi SpellRare ctermbg=NONE ctermfg=179 cterm=underline guibg=NONE guifg=#ecb55d gui=underline
-    hi QuickFixLine ctermbg=234 ctermfg=NONE cterm=NONE guibg=#1a1a1a guifg=NONE gui=NONE
+    hi QuickFixLine ctermbg=235 ctermfg=NONE cterm=bold guibg=#2c2c2c guifg=NONE gui=bold
     hi DiffAdd ctermbg=235 ctermfg=72 cterm=NONE guibg=#2c2c2c guifg=#679d80 gui=NONE
     hi DiffChange ctermbg=235 ctermfg=NONE cterm=NONE guibg=#2c2c2c guifg=NONE gui=NONE
     hi DiffDelete ctermbg=235 ctermfg=167 cterm=NONE guibg=#2c2c2c guifg=#cf4c4c gui=NONE
@@ -110,8 +110,8 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi Todo ctermbg=darkgrey ctermfg=green cterm=bold
     hi Underlined ctermbg=NONE ctermfg=blue cterm=underline
     hi Directory ctermbg=NONE ctermfg=blue cterm=NONE
-    hi StatusLine ctermbg=darkgrey ctermfg=darkyellow cterm=NONE
-    hi StatusLineNC ctermbg=darkgrey ctermfg=grey cterm=NONE
+    hi StatusLine ctermbg=darkgrey ctermfg=darkyellow cterm=bold
+    hi StatusLineNC ctermbg=darkgrey ctermfg=grey cterm=bold
     hi WildMenu ctermbg=darkgrey ctermfg=yellow cterm=NONE
     hi VertSplit ctermbg=NONE ctermfg=grey cterm=NONE
     hi NormalFloat ctermbg=darkgrey ctermfg=white cterm=NONE
@@ -134,7 +134,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi SpellBad ctermbg=NONE ctermfg=darkred cterm=underline
     hi SpellCap ctermbg=NONE ctermfg=red cterm=underline
     hi SpellRare ctermbg=NONE ctermfg=yellow cterm=underline
-    hi QuickFixLine ctermbg=black ctermfg=NONE cterm=NONE
+    hi QuickFixLine ctermbg=darkgrey ctermfg=NONE cterm=bold
     hi DiffAdd ctermbg=darkgrey ctermfg=green cterm=NONE
     hi DiffChange ctermbg=darkgrey ctermfg=NONE cterm=NONE
     hi DiffDelete ctermbg=darkgrey ctermfg=darkred cterm=NONE
