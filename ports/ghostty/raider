@@ -7,12 +7,12 @@
 # Place this file at `$HOME/.config/ghostty/themes/raider`
 
 background = 222222
-foreground = c9c9c9
+foreground = d3d3d3
 
 selection-background =
 selection-foreground =
 
-cursor-color = c9c9c9
+cursor-color = d3d3d3
 
 # ----------
 # Normal
@@ -32,7 +32,7 @@ palette = 5=#c061cb
 # Cyan
 palette = 6=#858ca6
 # White
-palette = 7=#c9c9c9
+palette = 7=#d3d3d3
 
 # ----------
 # Bright
@@ -52,6 +52,6 @@ palette = 13=#75507b
 # Cyan
 palette = 14=#29acc1
 # White
-palette = 15=#c9c9c9
+palette = 15=#d3d3d3
 
 # vim: ft=conf :

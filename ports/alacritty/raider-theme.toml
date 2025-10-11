@@ -9,29 +9,29 @@ decorations_theme_variant = 'Dark'
 
 [colors.primary]
 background = '#222222'
-foreground = '#c9c9c9'
-dim_foreground = '#828282'
+foreground = '#d3d3d3'
+dim_foreground = '#888888'
 
 [colors.normal]
-black = '#363636'
+black = '#505050'
 red = '#cf4c4c'
 green = '#679d80'
 yellow = '#a79180'
 blue = '#94baca'
 magenta = '#c061cb'
 cyan = '#858ca6'
-white = '#c9c9c9'
+white = '#d3d3d3'
 
 [colors.bright]
-black = '#828282'
+black = '#888888'
 red = '#88766f'
 green = '#2bb469'
 yellow = '#ecb55d'
 blue = '#3465a4'
 magenta = '#75507b'
 cyan = '#29acc1'
-white = '#c9c9c9'
+white = '#d3d3d3'
 
 [colors.search]
-matches = { foreground = '#222222', background = '#94baca' }
-focused_match = { foreground = '#222222', background = '#ecb55d' }
+matches = { foreground = '#ecb55d', background = '#2c2c2c' }
+focused_match = { foreground = '#f0955f', background = '#2c2c2c' }

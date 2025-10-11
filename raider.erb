@@ -33,9 +33,9 @@
     shadows   = ["#222222", 235, "black"]       # Background.
     inactive  = ["#2c2c2c", 235, "darkgrey"]    # Inactive UI background.
     shade     = ["#363636", 236, "darkgrey"]    # Lighter background.
-    hidden    = ["#4d4d4d", 239, "darkgrey"]    # Invisible.
-    gun_metal = ["#828282", 244, "grey"]        # Faded foreground.
-    snow      = ["#c9c9c9", 251, "white"]       # Foreground.
+    hidden    = ["#505050", 239, "darkgrey"]    # Invisible.
+    gun_metal = ["#888888", 244, "grey"]        # Faded foreground.
+    snow      = ["#d3d3d3", 251, "white"]       # Foreground.
 
     top       = ["#94baca", 109, "blue"]        # Teal.
     shorts    = ["#a79180", 137, "darkyellow"]  # Light yellowish-brown.
@@ -86,24 +86,22 @@
 
     highlights = [
         [ "Normal", bg, fg, "NONE" ],
-
-        [ "Comment", "NONE", gun_metal, "NONE" ],
-        [ "SpecialComment", "NONE", gun_metal, "bold" ],
-
-        [ "Delimiter", "Comment" ],
-
+        [ "NormalNC", "Normal" ],
         [ "NonText", "NONE", hidden, "NONE" ],
         [ "Conceal", "NonText" ],
         [ "Whitespace", "Conceal" ],
         [ "Ignore", "Conceal" ],
         [ "EndOfBuffer", "Conceal" ],
 
+        [ "Comment", "NONE", gun_metal, "NONE" ],
+        [ "SpecialComment", "NONE", gun_metal, "bold" ],
+        [ "Delimiter", "Comment" ],
+
         [ "Constant", "NONE", boots, "NONE" ],
         [ "Character", "Constant" ],
         [ "Number", "Constant" ],
         [ "Float", "Number" ],
         [ "Boolean", "Constant" ],
-
         [ "String", "NONE", top, "NONE" ],
 
         [ "Identifier", "NONE", moss, "NONE" ],
@@ -136,61 +134,68 @@
         [ "SpecialKey", "Special" ],
         [ "Tag", "NONE", gun_metal, "italic" ],
 
+        [ "SuccessMsg", "NONE", leaves, "bold" ],
+        [ "Success", "NONE", leaves, "bold" ],
         [ "ErrorMsg", "NONE", blood, "bold" ],
         [ "Error", "ErrorMsg" ],
         [ "WarningMsg", "NONE", jacket, "bold" ],
         [ "Warning", "WarningMsg" ],
 
-        [ "ModeMsg", "NONE", top, "NONE" ],
-        [ "MoreMsg", "ModeMsg" ],
-        [ "Question", "ModeMsg" ],
+        [ "MsgArea", "Normal" ],
+        [ "ModeMsg", "NONE", slate, "bold" ],
+        [ "MoreMsg", "NONE", slate, "bold,italic" ],
+        [ "Question", "MoreMsg" ],
 
+        [ "Title", "NONE", shorts, "bold" ],
         [ "Todo", glow, leaves, "bold" ],
-        [ "Underlined", "NONE", top, "underline" ],
         [ "Directory", "NONE", top, "NONE" ],
+        [ "Bold", "NONE", "NONE", "bold" ],
+        [ "Italic", "NONE", "NONE", "italic" ],
+        [ "BoldItalic", "NONE", "NONE", "bold,italic" ],
+        [ "Underlined", "NONE", top, "underline" ],
 
         [ "StatusLine", shade, shorts, "bold" ],
         [ "StatusLineNC", inactive, gun_metal, "bold" ],
         [ "StatusLineTerm", "StatusLine" ],
         [ "StatusLineTermNC", "StatusLineNC" ],
-
         [ "TabLine", "StatusLineNC" ],
-        [ "TabLineFill", "StatusLineNC" ],
+        [ "TabLineFill", "TabLine" ],
         [ "TabLineSel", "StatusLine" ],
 
-        [ "WildMenu", shade, gold, "NONE" ],
         [ "VertSplit", "NONE", gun_metal, "NONE" ],
         [ "WinSeparator", "VertSplit" ],
-        [ "NormalFloat", shade, snow, "NONE" ],
-        [ "FloatBorder", "WinSeparator" ],
-
-        [ "Title", "NONE", shorts, "bold" ],
+        [ "NormalFloat", inactive, "NONE", "NONE" ],
+        [ "FloatBorder", "NormalFloat" ],
 
         [ "LineNr", "NONE", gun_metal, "NONE" ],
         [ "LineNrAbove", "LineNr" ],
         [ "LineNrBelow", "LineNr" ],
-        [ "Cursor", snow, shadows, "NONE" ],
+        [ "SignColumn", "NONE", gun_metal, "bold" ],
+
+        [ "Cursor", snow, void, "NONE" ],
         [ "CursorLine", glow, "NONE", "NONE" ],
-        [ "CursorLineNr", glow, gold, "NONE" ],
+        [ "CursorLineNr", glow, shorts, "bold" ],
         [ "CursorColumn", "CursorLine" ],
         [ "ColorColumn", void, "NONE", "NONE" ],
-        [ "SignColumn", "NONE", gun_metal, "NONE" ],
 
         [ "Visual", shade, "NONE", "NONE" ],
         [ "VisualNOS", "Visual" ],
 
-        [ "Pmenu", shade, "NONE", "NONE" ],
-        [ "PmenuSbar", hidden, "NONE", "NONE" ],
-        [ "PmenuSel", "IncSearch" ],
+        [ "WildMenu", "PmenuSel" ],
+        [ "Pmenu", hidden, snow, "NONE" ],
+        [ "PmenuSel", moss, void, "bold" ],
+        [ "PmenuMatch", "NONE", gold, "italic,bold" ],
+        [ "PmenuMatchSel", "NONE", blood, "italic,bold" ],
+        [ "PmenuSbar", shade, "NONE", "NONE" ],
         [ "PmenuThumb", gun_metal, "NONE", "NONE" ],
 
-        [ "FoldColumn", "NONE", shade, "NONE" ],
-        [ "Folded", void, gun_metal, "NONE" ],
+        [ "Folded", glow, gun_metal, "NONE" ],
+        [ "FoldColumn", "NONE", gun_metal, "NONE" ],
 
-        [ "IncSearch", gold, shadows, "NONE" ],
-        [ "Search", top, shadows, "NONE" ],
+        [ "Search", glow, gold, "bold,italic" ],
+        [ "IncSearch", glow, jacket, "bold,italic" ],
         [ "CurSearch", "IncSearch" ],
-        [ "MatchParen", shade, gold, "bold" ],
+        [ "MatchParen", glow, jacket, "bold" ],
 
         [ "SpellBad", "NONE", blood, "underline" ],
         [ "SpellCap", "NONE", jacket, "underline" ],
@@ -213,10 +218,10 @@
         [ "DiagnosticUnderlineError", "NONE", blood, "underline" ],
         [ "DiagnosticWarn", "NONE", jacket, "bold" ],
         [ "DiagnosticUnderlineWarn", "NONE", jacket, "underline" ],
-        [ "DiagnosticInfo", "NONE", gold, "bold" ],
-        [ "DiagnosticUnderlineInfo", "NONE", gold, "underline" ],
-        [ "DiagnosticHint", "NONE", top, "bold" ],
-        [ "DiagnosticUnderlineHint", "NONE", top, "underline" ],
+        [ "DiagnosticInfo", "NONE", top, "bold" ],
+        [ "DiagnosticUnderlineInfo", "NONE", top, "underline" ],
+        [ "DiagnosticHint", "NONE", gold, "bold" ],
+        [ "DiagnosticUnderlineHint", "NONE", gold, "underline" ],
         [ "DiagnosticOk", "NONE", leaves, "bold" ],
         [ "DiagnosticUnderlineOk", "NONE", leaves, "underline" ],
         [ "DiagnosticDeprecated", "NONE", gun_metal, "bold" ],
