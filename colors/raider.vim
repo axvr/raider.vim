@@ -3,7 +3,7 @@
 " Webpage:     https://github.com/axvr/raider.vim
 " Description: A Vim colour scheme for archaeological escapades.
 " Licence:     MIT (2021)
-" Last Change: 2025-10-11
+" Last Change: 2025-10-13
 " Generator:   Modified version of RNB (https://github.com/romainl/vim-rnb)
 
 hi clear
@@ -19,6 +19,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     set background=dark
 
     hi NonText ctermbg=NONE ctermfg=239 cterm=NONE guibg=NONE guifg=#505050 gui=NONE
+    hi Conceal ctermbg=NONE ctermfg=244 cterm=NONE guibg=NONE guifg=#888888 gui=NONE
     hi Comment ctermbg=NONE ctermfg=244 cterm=NONE guibg=NONE guifg=#888888 gui=NONE
     hi SpecialComment ctermbg=NONE ctermfg=244 cterm=bold guibg=NONE guifg=#888888 gui=bold
     hi Constant ctermbg=NONE ctermfg=243 cterm=NONE guibg=NONE guifg=#88766f gui=NONE
@@ -98,6 +99,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     set background=dark
 
     hi NonText ctermbg=NONE ctermfg=darkgrey cterm=NONE
+    hi Conceal ctermbg=NONE ctermfg=grey cterm=NONE
     hi Comment ctermbg=NONE ctermfg=grey cterm=NONE
     hi SpecialComment ctermbg=NONE ctermfg=grey cterm=bold
     hi Constant ctermbg=NONE ctermfg=darkyellow cterm=NONE
@@ -171,10 +173,9 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
 endif
 
 hi! link NormalNC Normal
-hi! link Conceal NonText
-hi! link Whitespace Conceal
-hi! link Ignore Conceal
-hi! link EndOfBuffer Conceal
+hi! link Whitespace NonText
+hi! link Ignore NonText
+hi! link EndOfBuffer NonText
 hi! link Delimiter Comment
 hi! link Character Constant
 hi! link Number Constant
