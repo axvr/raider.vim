@@ -3,7 +3,7 @@
 " Webpage:     https://github.com/axvr/raider.vim
 " Description: A Vim colour scheme for archaeological escapades.
 " Licence:     MIT (2021)
-" Last Change: 2025-10-13
+" Last Change: 2025-12-24
 " Generator:   Modified version of RNB (https://github.com/romainl/vim-rnb)
 
 hi clear
@@ -14,7 +14,7 @@ endif
 let colors_name = "raider"
 
 if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
-    hi Normal ctermbg=235 ctermfg=251 cterm=NONE guibg=#222222 guifg=#d3d3d3 gui=NONE
+    hi Normal ctermbg=235 ctermfg=251 cterm=NONE guibg=#1f1f1f guifg=#d3d3d3 gui=NONE
 
     set background=dark
 

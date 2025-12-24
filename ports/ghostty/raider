@@ -6,7 +6,7 @@
 #
 # Place this file at `$HOME/.config/ghostty/themes/raider`
 
-background = 222222
+background = 1f1f1f
 foreground = d3d3d3
 
 selection-background =
