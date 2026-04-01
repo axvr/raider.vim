@@ -1,5 +1,5 @@
 (deftheme raider
-  "GNU Emacs theme inspired by the classic Tomb Raider games.")
+  "GNU Emacs theme for archaeological escapades.")
 
 ;; TODO: fix on terminal emacs
 ;;   <https://github.com/nashamri/spacemacs-theme/blob/master/spacemacs-common.el#L95-L104>
@@ -9,113 +9,96 @@
        ;; -----------------------------------------------------
        ;; Palette
 
-       (brown  "#88766F")    ; Light redish brown.
-       (khaki  "#A99B80")    ; Light yellowish-brown.
-       (orange "#EAB56B")    ; Brownish pale yellow.
-       (red    "#A74F4F")    ; Pale red.
+       ;; TODO: more similar approach to that of alabaster.  (Maybe do that for the light theme version?)
 
-       (slate "#858CA6")     ; Purplish blue.
-       (teal  "#94BACA")     ; Pale blueish-teal.
-       (darkteal "#96A8A1")  ; Pale greenish-teal.
-       (green "#77CDB0")     ; Pale blueish-green.
+       ;; New colours.
 
-       (fg "#C9C9C9")        ; Foreground.
-       (fg-alt "#666967")    ; Darker foreground.
+       (void  "#1a1a1a")     ; Darkest background.
+       (shadows "#1f1f1f")   ; Background.
+       (inactive "#2c2c2c")  ; Inactive UI background.
+       (shade "#363636")     ; Lighter background.
+       (hidden "#505050")    ; Invisible.
+       (gun-metal "#888888") ; Faded foreground.
+       (snow "#d3d3d3")      ; Foreground.
 
-       (bg "#222222")        ; Background.
-       (bg-alt "#2A2A2A")    ; Light background.
+       (top "#94baca")       ; Teal.
+       (shorts "#a79180")    ; Light yellowish-brown.
+       (boots "#88766f")     ; Light redish-brown.
+       (jacket "#f0955f")    ; Orange.
 
-       (layer "#343434")     ; Layer on background.
-       (layer-alt "#4A4A4A") ; Darker layer.
+       (leaves "#679d80")    ; Pale blueish-green.
+       (moss "#96a8a1")      ; Pale greenish-teal.
+       (slate "#858ca6")     ; Purplish-blue.
+       (blood "#cf4c4c")     ; Red.
+       (gold "#ecb55d")      ; Yellow.
 
-
-       ;; Idea:
-       ;;   - Theme code like a Tomb Raider environment.
-       ;;   - Theme the interface like Lara Croft.
-       ;;
-       ;; Or:
-       ;;   - Use all colours wherever.
-       ;;
-       ;; ???
-
-       ;; Colour naming convention:
-       ;;
-       ;; (if — interface)
-       ;; fg fg-dark bg bg-light bg-dark if if-dark
-       ;;
-       ;; Name colours after thing.
-       ;;   lara-teal  (or lara-shirt)
-       ;;   lara-khaki  (or lara-shorts)
-       ;;   -----------
-       ;;   sand-brown  (or env-brown)
-       ;;   water-green
+       (glow inactive)
+       (bg shadows)
+       (fg snow)
 
   )
 
   (custom-theme-set-faces
    'raider
 
-
    ;; ---------------------------------------------------------
    ;; Base
 
    `(default ((,class :background ,bg :foreground ,fg)))
-   `(fringe  ((,class :inherit default :foreground ,fg-alt)))
+   `(fringe  ((,class :inherit default :foreground ,gun-metal)))
    `(cursor  ((,class :foreground ,fg)))
-   `(region  ((,class :background ,layer)))
-   `(secondary-selection ((,class :background ,layer-alt)))
+   `(region  ((,class :background ,shade)))
+   `(secondary-selection ((,class :background ,shade)))
 
-   `(error   ((,class :foreground ,red :weight bold)))
-   `(warning ((,class :foreground ,orange :weight bold)))
-   `(success ((,class :foreground ,green :weight bold)))
-
+   `(error   ((,class :foreground ,blood :weight bold)))
+   `(warning ((,class :foreground ,jacket :weight bold)))
+   `(success ((,class :foreground ,leaves :weight bold)))
 
    ;; ---------------------------------------------------------
    ;; Syntax
 
-   `(font-lock-comment-face ((,class :foreground ,fg-alt)))
+   `(font-lock-comment-face ((,class :foreground ,gun-metal)))
    `(font-lock-comment-delimiter-face ((,class :inherit font-lock-comment-face)))
 
    `(font-lock-builtin-face  ((,class :foreground ,slate)))
-   `(font-lock-constant-face ((,class :foreground ,brown)))
-   `(font-lock-function-name-face ((,class :foreground ,darkteal)))
-   `(font-lock-keyword-face       ((,class :foreground ,khaki)))
-   `(font-lock-preprocessor-face  ((,class :foreground ,brown :inherit font-lock-builtin-face)))
-   `(font-lock-type-face ((,class :foreground ,brown)))
-   `(font-lock-variable-name-face ((,class :foreground ,darkteal)))
+   `(font-lock-constant-face ((,class :foreground ,boots)))
+   `(font-lock-function-name-face ((,class :foreground ,moss)))
+   `(font-lock-keyword-face       ((,class :foreground ,shorts)))
+   `(font-lock-preprocessor-face  ((,class :foreground ,boots :inherit font-lock-builtin-face)))
+   `(font-lock-type-face ((,class :foreground ,boots)))
+   `(font-lock-variable-name-face ((,class :foreground ,moss)))
 
-   `(font-lock-string-face ((,class :foreground ,teal)))
+   `(font-lock-string-face ((,class :foreground ,top)))
    `(font-lock-doc-face ((,class :inherit font-lock-string-face)))
-   `(font-lock-negation-char-face ((,class :foreground ,khaki)))
+   `(font-lock-negation-char-face ((,class :foreground ,shorts)))
    `(font-lock-regexp-grouping-backslash ((,class :inherit font-lock-negation-char-face)))
    `(font-lock-regexp-grouping-construct ((,class :inherit font-lock-regexp-grouping-backslash)))
 
    `(font-lock-warning-face ((,class :inherit error)))
-   `(trailing-whitespace ((,class :foreground ,fg :background ,red)))
+   `(trailing-whitespace ((,class :foreground ,fg :background ,blood)))
 
-   `(highlight ((,class :background ,teal :foreground ,bg)))
+   `(highlight ((,class :background ,glow)))
 
-   `(link         ((,class :foreground ,teal :underline t)))
+   `(link         ((,class :foreground ,top :underline t)))
    `(link-visited ((,class :foreground ,slate :underline t :inherit link)))
 
-   `(parenthesis ((,class :foreground ,fg-alt)))
-   `(todo ((,class :foreground ,red)))  ; TODO
-
+   `(parenthesis ((,class :foreground ,gun-metal)))
+   `(todo ((,class :background ,glow :foreground ,leaves :weight bold)))  ; TODO
 
    ;; ---------------------------------------------------------
    ;; Interface
 
-   `(mode-line ((,class :foreground ,khaki :background ,layer)))
+   `(mode-line ((,class :foreground ,shorts :background ,shade)))
    `(mode-line-buffer-id ((,class :weight bold)))
    `(mode-line-emphasis  ((,class :weight bold)))
    `(mode-line-highlight ((,class :inherit highlight)))
-   `(mode-line-inactive ((,class :foreground ,fg-alt :background ,bg-alt :inherit mode-line)))
+   `(mode-line-inactive ((,class :foreground ,gun-metal :background ,inactive :inherit mode-line)))
 
-   ;; display-line-number-mode
-   `(line-number ((,class :foreground ,fg-alt)))
-   `(line-number-current-line ((,class :background ,bg-alt :foreground ,orange)))
+   ;; display-line-numbers-mode
+   `(line-number ((,class :foreground ,gun-metal)))
+   `(line-number-current-line ((,class :background ,glow :foreground ,shorts)))
 
-   `(hl-line ((,class :background ,bg-alt)))
+   `(hl-line ((,class :background ,glow)))
 
    `(tab-line ((,class :inherit mode-line-inactive)))
    `(tab-line-tab ((,class :inherit mode-line)))
@@ -129,36 +112,35 @@
    `(header-line ((,class :background nil :inherit mode-line)))
    `(menu ((,class :inherit mode-line)))
 
-   `(minibuffer-prompt ((,class :weight bold :foreground ,teal)))
+   `(minibuffer-prompt ((,class :weight bold :foreground ,top)))
 
    ;; Isearch
-   `(isearch ((,class :foreground ,bg :background ,orange)))
-   `(isearch-fail ((,class :background ,red :foreground ,bg)))
-   `(match ((,class :foreground ,fg :background ,teal)))
-   `(lazy-highlight ((,class :foreground ,bg :background ,khaki)))
+   `(isearch ((,class :foreground ,bg :background ,jacket)))
+   `(isearch-fail ((,class :background ,blood :foreground ,bg)))
+   `(match ((,class :foreground ,fg :background ,top)))
+   `(lazy-highlight ((,class :foreground ,bg :background ,shorts)))
 
-   `(show-paren-match ((,class :foreground ,green :weight bold :underline t)))
-   `(show-paren-mismatch ((,class :foreground ,bg :background ,red :weight bold)))
-
+   `(show-paren-match ((,class :foreground ,leaves :weight bold :underline t)))
+   `(show-paren-mismatch ((,class :foreground ,bg :background ,blood :weight bold)))
 
    ;; ---------------------------------------------------------
    ;; Modes
 
-   ;; `(diff-added   ((,class :foreground nil :background "#293235" :extend t)))
-   ;; `(diff-changed ((,class :foreground nil :background "#32322c" :extend t)))
-   ;; `(diff-removed ((,class :foreground nil :background "#3c2a2c" :extend t)))
+   `(diff-added   ((,class :foreground ,leaves :background ,glow :extend t)))
+   `(diff-changed ((,class :foreground nil :background ,glow :extend t)))
+   `(diff-removed ((,class :foreground ,blood :background ,glow :extend t)))
    ;; `(diff-header  ((,class :foreground ,grey :background ,bgl-1)))
    ;; `(diff-file-header ((,class :foreground ,purple :inherit diff-header)))
    ;; `(diff-hunk-header ((,class :foreground ,grey   :inherit diff-header)))
-   ;; `(diff-refine-added ((,class :foreground ,green)))
+   ;; `(diff-refine-added ((,class :foreground ,leaves)))
    ;; `(diff-refine-changed ((,class :foreground ,yellow)))
-   ;; `(diff-refine-removed ((,class :foreground ,red)))
-   ;; `(diff-indicator-added ((,class :foreground ,green)))
-   ;; `(diff-indicator-changed ((,class :foreground ,yellow)))
-   ;; `(diff-indicator-removed ((,class :foreground ,red)))
+   ;; `(diff-refine-removed ((,class :foreground ,blood)))
+   `(diff-indicator-added   ((,class :foreground ,leaves)))
+   `(diff-indicator-changed ((,class :foreground ,shorts)))
+   `(diff-indicator-removed ((,class :foreground ,blood)))
 
    ;; `(flyspell-duplicate ((,class :underline (:style wave :color ,yellow))))
-   ;; `(flyspell-incorrect ((,class :underline (:style wave :color ,red))))
+   ;; `(flyspell-incorrect ((,class :underline (:style wave :color ,blood))))
 
    ;;(widget-button)
    ;;(widget-field)
@@ -180,27 +162,27 @@
    ;; `(outline-6 ((,class :inherit outline-5)))
    ;; `(outline-7 ((,class :inherit outline-6)))
    ;; `(outline-8 ((,class :inherit outline-7)))
-   ;; `(org-todo ((,class :foreground ,orange :weight bold)))
+   ;; `(org-todo ((,class :foreground ,jacket :weight bold)))
 
-   `(company-tooltip ((,class :background ,bg-alt :foreground ,fg)))
-   `(company-tooltip-selection ((,class :background ,layer :foreground ,orange)))
-   `(company-tooltip-common ((,class :background nil :foreground ,khaki)))
-   `(company-tooltip-common-selection ((,class :background ,nil :foreground ,khaki)))
-   `(company-scrollbar-bg ((,class :background ,layer)))
-   `(company-scrollbar-fg ((,class :background ,teal)))
-   `(company-tooltip-mouse ((,class :inherit highlight)))
-   `(company-tooltip-annotation ((,class :foreground ,fg-alt)))
-   `(company-preview ((,class :background ,bg-alt :foreground ,fg-alt)))
-   `(company-preview-common ((,class :background ,bg-alt :foreground ,fg-alt)))
-   `(company-preview-search ((,class :background ,bg-alt :foreground ,fg-alt)))
+   ;; `(company-tooltip ((,class :background ,bg-alt :foreground ,fg)))
+   ;; `(company-tooltip-selection ((,class :background ,shade :foreground ,jacket)))
+   ;; `(company-tooltip-common ((,class :background nil :foreground ,shorts)))
+   ;; `(company-tooltip-common-selection ((,class :background ,nil :foreground ,shorts)))
+   ;; `(company-scrollbar-bg ((,class :background ,shade)))
+   ;; `(company-scrollbar-fg ((,class :background ,top)))
+   ;; `(company-tooltip-mouse ((,class :inherit highlight)))
+   ;; `(company-tooltip-annotation ((,class :foreground ,fg-alt)))
+   ;; `(company-preview ((,class :background ,bg-alt :foreground ,fg-alt)))
+   ;; `(company-preview-common ((,class :background ,bg-alt :foreground ,fg-alt)))
+   ;; `(company-preview-search ((,class :background ,bg-alt :foreground ,fg-alt)))
 
    `(selectrum-current-candidate ((,class :inherit highlight)))
 
-   `(dired-directory ((,class :foreground ,teal)))
+   `(dired-directory ((,class :foreground ,top)))
 
-   `(ledger-font-xact-highlight-face ((,class :foreground nil :background ,bg-alt)))
+   `(ledger-font-xact-highlight-face ((,class :foreground nil :background ,glow)))
 
-   `(sly-mrepl-output-face ((,class :foreground ,darkteal)))
+   `(sly-mrepl-output-face ((,class :foreground ,moss)))
 
    ;; TODO: terminal colours
 
