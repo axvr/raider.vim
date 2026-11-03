@@ -5,13 +5,7 @@
 ;;   <https://github.com/nashamri/spacemacs-theme/blob/master/spacemacs-common.el#L95-L104>
 
 (let* ((class '((class color) (min-colors 89)))
-
-       ;; -----------------------------------------------------
-       ;; Palette
-
        ;; TODO: more similar approach to that of alabaster.  (Maybe do that for the light theme version?)
-
-       ;; New colours.
 
        (void  "#1a1a1a")     ; Darkest background.
        (shadows "#1f1f1f")   ; Background.
@@ -34,9 +28,7 @@
 
        (glow inactive)
        (bg shadows)
-       (fg snow)
-
-  )
+       (fg snow))
 
   (custom-theme-set-faces
    'raider

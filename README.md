@@ -4,6 +4,11 @@ A Vim colour scheme for archaeological escapades.
 
 ![](https://raw.githubusercontent.com/axvr/raider.vim/ae8e48395b70a518824fb29c84ab8a2d6dddc01f/raider2.png)
 
+(This Git repository is mirrored to
+[Codeberg](https://codeberg.org/axvr/raider.vim),
+[Sourcehut](https://git.sr.ht/~axvr/raider.vim) and
+[GitHub](https://github.com/axvr/raider.vim).)
+
 
 ## Usage
 
@@ -24,7 +29,7 @@ colorscheme raider
 ## Ports
 
 Ghostty, Alacritty and GNU Emacs ports of this theme can be found on the
-[`ports` directory](https://github.com/axvr/raider.vim/tree/master/ports).
+[`ports` directory](https://codeberg.org/axvr/raider.vim/src/branch/master/ports).
 
 
 ## Attribution
@@ -32,7 +37,7 @@ Ghostty, Alacritty and GNU Emacs ports of this theme can be found on the
 Made possible thanks to Romain Lafourcade's [Vim-RNB](https://github.com/romainl/vim-rnb)
 Vim colour scheme template.
 
-Fallback xterm-256 colours were selected using [`colours.clj`](https://github.com/axvr/codedump/tree/master/2021/colours).
+Fallback xterm-256 colours were selected using [`colours.clj`](https://codeberg.org/axvr/archive/src/branch/master/2021/colours).
 
 
 ## Legal

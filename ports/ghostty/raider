@@ -2,7 +2,7 @@
 #
 # Public domain.  No rights reserved.
 #
-# https://github.com/axvr/raider.vim/blob/master/ports/ghostty/raider
+# https://codeberg.org/axvr/raider.vim/src/branch/master/ports/ghostty/raider
 #
 # Place this file at `$HOME/.config/ghostty/themes/raider`
 
