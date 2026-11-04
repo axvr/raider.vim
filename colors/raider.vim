@@ -1,9 +1,9 @@
 " Name:        raider.vim
 " Author:      Alex Vear <alex@vear.uk>
-" Webpage:     https://github.com/axvr/raider.vim
+" Webpage:     https://codeberg.org/axvr/raider.vim
 " Description: A Vim colour scheme for archaeological escapades.
 " Licence:     MIT (2021)
-" Last Change: 2025-12-24
+" Last Change: 2026-11-04
 " Generator:   Modified version of RNB (https://github.com/romainl/vim-rnb)
 
 hi clear

@@ -2,11 +2,11 @@
 
 A Vim colour scheme for archaeological escapades.
 
-![](https://raw.githubusercontent.com/axvr/raider.vim/ae8e48395b70a518824fb29c84ab8a2d6dddc01f/raider2.png)
+![](https://codeberg.org/axvr/raider.vim/raw/commit/ae8e48395b70a518824fb29c84ab8a2d6dddc01f/raider2.png)
 
 (This Git repository is mirrored to
 [Codeberg](https://codeberg.org/axvr/raider.vim),
-[Sourcehut](https://git.sr.ht/~axvr/raider.vim) and
+[SourceHut](https://git.sr.ht/~axvr/raider.vim) and
 [GitHub](https://github.com/axvr/raider.vim).)
 
 
